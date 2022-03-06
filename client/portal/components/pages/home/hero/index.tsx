@@ -56,7 +56,10 @@ export const HomeHero = () => {
                         />
                         <div className="z-[1] container mx-auto flex items-center">
                             <div className="font-secondary p-6 max-w-[680px]">
-                                <h2 className="text-6xl">{slide.title}</h2>
+                                <h2 
+                                    className="text-6xl"
+                                    dangerouslySetInnerHTML={{__html: slide.title}}
+                                />
                                 <p className="mt-4 text-4xl">{slide.text}</p>
                                 <div>{slide.buttonText}</div>
                             </div>

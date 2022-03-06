@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
-// import ArrowWhite from '../../../../assets/icons/arrowWhite.svg';
+import DirectionLeft from 'public/icons/direction-left.svg'
+import DirectionRight from 'public/icons/direction-right.svg'
 
 type HomeHeroArrowsProps = {
     slider: any;
@@ -19,17 +20,17 @@ export const HomeHeroArrows: FC<HomeHeroArrowsProps> = ({ slider }) => {
         <div className="flex items-center ml-3">
             <div
                 role="presentation"
-                className="flex items-center justify-center w-[30px] h-[30px] rounded-full border border-solid border-black mr-3"
+                className="flex items-center justify-center w-[30px] h-[30px] rounded-full border border-solid border-black mr-3 text-black hover:bg-black hover:text-white"
                 onClick={onPrevArrowClick}
             >
-                {/* <ArrowWhite className="w-[15px] h-[15px]" /> */}
+                <DirectionLeft className="w-[24px] h-[24px]" />
             </div>
             <div
                 role="presentation"
-                className="flex items-center justify-center w-[30px] h-[30px] rounded-full border border-solid border-black rotate-180"
+                className="flex items-center justify-center w-[30px] h-[30px] rounded-full border border-solid border-black text-black hover:bg-black hover:text-white"
                 onClick={onNextArrowClick}
             >
-                {/* <ArrowWhite className="w-[15px] h-[15px]" /> */}
+                <DirectionRight className="w-[24px] h-[24px]" />
             </div>
         </div>
     );
