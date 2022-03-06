@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const MainHeader = () => {
     return (
@@ -7,7 +8,7 @@ export const MainHeader = () => {
                 <div className="mr-6">
                     <Link href="/">
                         <a>
-                            <img src="./Logo.svg" alt="UNIVERSAL" />
+                            <Image src="./Logo.svg" alt="UNIVERSAL" />
                         </a>
                     </Link>
                 </div>

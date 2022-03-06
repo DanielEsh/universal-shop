@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import Image from 'next/image';
-import { useKeenSlider } from 'keen-slider/react';
+import { useState } from 'react'
+import Image from 'next/image'
+import { useKeenSlider } from 'keen-slider/react'
 
-import { HomeHeroPagination } from '@/components/pages/home/hero/HomeHeroPagination';
-import { HomeHeroFraction } from '@/components/pages/home/hero/HomeHeroFraction';
-import { HomeHeroArrows } from '@/components/pages/home/hero/HomeHeroArrows';
+import { HomeHeroPagination } from '@/components/pages/home/hero/HomeHeroPagination'
+import { HomeHeroFraction } from '@/components/pages/home/hero/HomeHeroFraction'
+import { HomeHeroArrows } from '@/components/pages/home/hero/HomeHeroArrows'
 
-import Hero8 from 'public/images/hero8.jpg';
-import Hero5 from 'public/images/hero5.jpg';
+import Hero8 from 'public/images/hero8.jpg'
+import Hero5 from 'public/images/hero5.jpg'
 
 const mockData = [
     {
@@ -24,22 +24,22 @@ const mockData = [
         buttonText: '2',
         image: Hero5,
     },
-];
+]
 
 export const HomeHero = () => {
-    const [loaded, setLoaded] = useState<boolean>(false);
-    const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
+    const [loaded, setLoaded] = useState<boolean>(false)
+    const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0)
 
     const [refCallback, sliderNode] = useKeenSlider({
         loop: true,
         renderMode: 'performance',
         slideChanged(slider) {
-            setCurrentSlideIndex(slider.track.details.rel);
+            setCurrentSlideIndex(slider.track.details.rel)
         },
         created() {
-            setLoaded(true);
+            setLoaded(true)
         },
-    });
+    })
 
     return (
         <div className="relative h-screen">
@@ -58,7 +58,7 @@ export const HomeHero = () => {
                             <div className="font-secondary p-6 max-w-[680px]">
                                 <h2 
                                     className="text-6xl"
-                                    dangerouslySetInnerHTML={{__html: slide.title}}
+                                    dangerouslySetInnerHTML={{ __html: slide.title }}
                                 />
                                 <p className="mt-4 text-4xl">{slide.text}</p>
                                 <div>{slide.buttonText}</div>
@@ -94,5 +94,5 @@ export const HomeHero = () => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC } from 'react'
 
 import DirectionLeft from 'public/icons/direction-left.svg'
 import DirectionRight from 'public/icons/direction-right.svg'
@@ -9,12 +9,12 @@ type HomeHeroArrowsProps = {
 
 export const HomeHeroArrows: FC<HomeHeroArrowsProps> = ({ slider }) => {
     const onPrevArrowClick = (e: any) => {
-        e.stopPropagation() || slider.current?.prev();
-    };
+        e.stopPropagation() || slider.current?.prev()
+    }
 
     const onNextArrowClick = (e: any) => {
-        e.stopPropagation() || slider.current?.next();
-    };
+        e.stopPropagation() || slider.current?.next()
+    }
 
     return (
         <div className="flex items-center ml-3">
@@ -33,5 +33,5 @@ export const HomeHeroArrows: FC<HomeHeroArrowsProps> = ({ slider }) => {
                 <DirectionRight className="w-[24px] h-[24px]" />
             </div>
         </div>
-    );
-};
+    )
+}

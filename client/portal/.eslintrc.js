@@ -11,7 +11,6 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:jsx-a11y/recommended',
         'next/core-web-vitals',
-        'plugin:prettier/recommended',
     ],
     'parser': '@typescript-eslint/parser',
     'parserOptions': {
@@ -44,9 +43,6 @@ module.exports = {
         ],
         'comma-dangle': ['warn', 'always-multiline'],
 
-        // Prettier
-        'prettier/prettier': 'error',
-
         // Best practices
         curly: [2, 'multi-line'],
         'no-else-return': 2,
@@ -64,5 +60,8 @@ module.exports = {
         'react/jsx-key': 2,
         'react/jsx-sort-props': 0,
         'react/react-in-jsx-scope': 0,
+
+        // a11y
+        'jsx-a11y/anchor-is-valid': 0,
     },
 }

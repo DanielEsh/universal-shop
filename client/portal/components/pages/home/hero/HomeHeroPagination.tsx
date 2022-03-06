@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC } from 'react'
 
 type HomeHeroPaginationProps = {
     slider: any;
@@ -11,7 +11,7 @@ export const HomeHeroPagination: FC<HomeHeroPaginationProps> = ({
 }) => {
     const allSlidesLength = [
         ...Array(slider?.current.track.details.slides.length).keys(),
-    ];
+    ]
 
     return (
         <div className="flex items-center">
@@ -21,7 +21,7 @@ export const HomeHeroPagination: FC<HomeHeroPaginationProps> = ({
                         key={idx}
                         type="button"
                         onClick={() => {
-                            slider?.current.moveToIdx(idx);
+                            slider?.current.moveToIdx(idx)
                         }}
                         className={`mr-[5px] ml-[5px] rounded-full transition-all ${
                             idx === activeSlide
@@ -29,8 +29,8 @@ export const HomeHeroPagination: FC<HomeHeroPaginationProps> = ({
                                 : 'w-[6px] h-[6px] p-[5px] bg-black'
                         } `}
                     />
-                );
+                )
             })}
         </div>
-    );
-};
+    )
+}
