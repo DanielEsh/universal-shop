@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { useKeenSlider } from 'keen-slider/react'
-
+import { Button } from '@/components/ui/Button'
 import { HomeHeroPagination } from '@/components/pages/home/hero/HomeHeroPagination'
 import { HomeHeroFraction } from '@/components/pages/home/hero/HomeHeroFraction'
 import { HomeHeroArrows } from '@/components/pages/home/hero/HomeHeroArrows'
@@ -51,6 +51,7 @@ export const HomeHero = () => {
                     >
                         <Image
                             src={slide.image}
+                            alt=""
                             layout="fill"
                             objectFit="cover"
                         />
@@ -61,7 +62,7 @@ export const HomeHero = () => {
                                     dangerouslySetInnerHTML={{ __html: slide.title }}
                                 />
                                 <p className="mt-4 text-4xl">{slide.text}</p>
-                                <div>{slide.buttonText}</div>
+                                <Button>{slide.buttonText}</Button>
                             </div>
                         </div>
                     </div>
