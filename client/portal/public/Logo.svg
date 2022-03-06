@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="242" height="40" viewBox="0 0 242 40">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 36px;
+        fill: #141414;
+        text-anchor: middle;
+        font-family: "Intro ";
+      }
+    </style>
+  </defs>
+  <image id="Фон" width="242" height="40" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPIAAAAoCAYAAADEzaftAAAAkUlEQVR4nO3TAQ3AMAzAsP78OXc4GtkUony7uwOc9ssH9xkZAowMAUaGACNDgJEhwMgQYGQIMDIEGBkCjAwBRoYAI0OAkSHAyBBgZAgwMgQYGQKMDAFGhgAjQ4CRIcDIEGBkCDAyBBgZAowMAUaGACNDgJEhwMgQYGQIMDIEGBkCjAwBRoYAI0OAkSHAyHDdzDyczwRMqiQaagAAAABJRU5ErkJggg=="/>
+  <text id="UNIVERSAL" class="cls-1" x="120.079" y="29.67"><tspan x="120.079">UNIVERSAL</tspan></text>
+</svg>

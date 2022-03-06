@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { Header } from '../layouts/header'
 
 type DefaultLayoutProps = {
     children: ReactNode;
@@ -6,8 +7,7 @@ type DefaultLayoutProps = {
 
 export const DefaultLayout = ({ children }: DefaultLayoutProps) => (
     <>
-        Header
-        <main>{children}</main>
-        Footer
+        <Header />
+        <main className="relative bg-white z-[1]">{children}</main>
     </>
 )
