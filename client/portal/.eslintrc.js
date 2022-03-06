@@ -11,6 +11,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:jsx-a11y/recommended',
         'next/core-web-vitals',
+        'plugin:prettier/recommended',
     ],
     'parser': '@typescript-eslint/parser',
     'parserOptions': {
@@ -42,6 +43,9 @@ module.exports = {
             'never',
         ],
         'comma-dangle': ['warn', 'always-multiline'],
+
+        // Prettier
+        'prettier/prettier': 'error',
 
         // Best practices
         curly: [2, 'multi-line'],
