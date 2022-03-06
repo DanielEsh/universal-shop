@@ -4,7 +4,7 @@ import {MenuHeader} from './MenuHeader';
 
 export const Header = () => {
     return (
-        <header className="w-full z-10">
+        <header className="fixed top-0 left-0 w-full z-10">
             <TopHeader />
             <MainHeader />
             <MenuHeader />
