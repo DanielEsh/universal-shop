@@ -51,5 +51,14 @@ module.exports = {
 
         // Variables
         'no-var': 1,
+
+        // Codestyle
+        'object-curly-spacing': [2, 'always'],
+
+        // React 
+        'jsx-quotes': [2, 'prefer-double'],
+        'react/jsx-key': 2,
+        'react/jsx-sort-props': 0,
+        'react/react-in-jsx-scope': 0,
     },
 }
