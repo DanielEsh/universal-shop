@@ -14,6 +14,15 @@ const styles = {
 }
 
 export const ProductCard = () => {
+    // const swiper = useSwiper()
+    let swiperInstance: any = null
+
+    const onChangeSlider = (i: any) => {
+        console.log(swiperInstance)
+        swiperInstance?.slideTo(i, 100)
+        return i
+    }
+
     return (
         <div className={styles.productCardRoot}>
             <div className={styles.slider}>
@@ -23,6 +32,7 @@ export const ProductCard = () => {
                     effect="fade"
                     loop
                     className="h-full w-full"
+                    onInit={(swiper) => swiperInstance = swiper}
                 >
                     {[1, 2, 3].map((i, el) => {
                         return (
@@ -34,6 +44,22 @@ export const ProductCard = () => {
                             </SwiperSlide>
                         )
                     })}
+                    <div 
+                        className="absolute top-0 z-1 flex w-full h-full"
+                        onMouseLeave={() => onChangeSlider(1)}
+                    >
+                        {[1, 2, 3].map((i, el) => {
+                            return (
+                                <div 
+                                    className="flex-auto bg-transparent"
+                                    key={i}
+                                    onMouseEnter={() => onChangeSlider(i)}
+                                >
+                                    {el}
+                                </div>
+                            )
+                        })}
+                    </div>
                 </Swiper>
             </div>
 
