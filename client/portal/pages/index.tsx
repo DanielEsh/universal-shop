@@ -14,8 +14,28 @@ const Home: NextPage = () => {
 
             <HomeHero />
 
-            <div className="container mx-auto">
-                Page
+            <div className="flex flex-col container mx-auto">
+                <div>
+                    Преимущества
+                </div>
+                <div>
+                    Слайдер с акциями + товар дня
+                </div>
+                <div>
+                    Категории товаров
+                </div>
+                <div>
+                    Новые товары
+                </div>
+                <div>
+                    Новости
+                </div>
+                <div>
+                    Подписаться на рассылку
+                </div>
+                <div>
+                    Footer
+                </div>
             </div>
         </div>
     )
