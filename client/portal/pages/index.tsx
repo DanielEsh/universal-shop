@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import { HomeHero } from '@/components/pages/home/hero'
+import { ProductCard } from '@/components/ProductCard'
 
 const Home: NextPage = () => {
     return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
             <HomeHero />
 
             <div className="flex flex-col container mx-auto">
+                <ProductCard />
                 <div>
                     Преимущества
                 </div>
