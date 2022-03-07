@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import { HomeHero } from '@/components/pages/home/hero'
-import { ProductCard } from '@/components/ProductCard'
+import { ProductCard } from '@/components/cards/ProductCard/ProductCard'
 
 const Home: NextPage = () => {
     return (

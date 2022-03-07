@@ -1,13 +1,32 @@
+import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { EffectFade } from 'swiper'
+import SwiperCore, { EffectFade, Pagination } from 'swiper'
 
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 
+import Image1 from 'public/images/hero6.jpg'
+import Image2 from 'public/images/category.png'
+
+const mockCardInfo = {
+    images: [
+        {
+            id: 1,
+            image: Image1,
+        },
+        {
+            id: 2,
+            image: Image2,
+        },
+    ],
+}
+
 const styles = {
     productCardRoot: 'bg-gray-100 w-[320px] h-[550px] p-16 rounded-md',
     slider: 'relative w-full h-[250px]',
-    sliderElement: 'absolute flex h-full bg-gray-100 text-black',
+    sliderImage: 'absolute flex h-full bg-gray-100 text-black',
+    sliderSwitcherContainer: 'absolute top-0 z-1 flex w-full h-full',
+    sliderSwitcher: 'flex-auto bg-transparent',
     category: '',
     name: '',
     rating: '',
@@ -16,8 +35,11 @@ const styles = {
 export const ProductCard = () => {
     let swiperInstance: SwiperCore
 
-    const onChangeSlider = (i: number) => {
-        swiperInstance.slideTo(i, 100)
+    const onChangeSlider = (index: number) => {
+        console.log(index, swiperInstance)
+        if (swiperInstance) {
+            swiperInstance.slideTo(index, 100)
+        }
     }
 
     return (
@@ -25,35 +47,38 @@ export const ProductCard = () => {
             <div className={styles.slider}>
                 <Swiper 
                     slidesPerView={1}
-                    modules={[EffectFade]} 
+                    modules={[EffectFade, Pagination]} 
+                    pagination
                     effect="fade"
-                    loop
                     className="h-full w-full"
-                    onInit={(swiper) => swiperInstance = swiper}
+                    onSwiper={(swiper) => swiperInstance = swiper}
                 >
-                    {[1, 2, 3].map((i, el) => {
+                    {mockCardInfo.images.map(image => {
                         return (
                             <SwiperSlide 
-                                key={i}
-                                className={styles.sliderElement}
+                                key={image.id}
+                                className={styles.sliderImage}
                             >
-                                Slide {el}
+                                <Image
+                                    src={image.image}
+                                    alt=""
+                                    layout="fill"
+                                    objectFit="contain"
+                                />
                             </SwiperSlide>
                         )
                     })}
                     <div 
-                        className="absolute top-0 z-1 flex w-full h-full"
-                        onMouseLeave={() => onChangeSlider(1)}
+                        className={styles.sliderSwitcherContainer}
+                        onMouseLeave={() => onChangeSlider(0)}
                     >
-                        {[1, 2, 3].map((i, el) => {
+                        {mockCardInfo.images.map(({ id }, idx) => {
                             return (
                                 <div 
-                                    className="flex-auto bg-transparent"
-                                    key={i}
-                                    onMouseEnter={() => onChangeSlider(i)}
-                                >
-                                    {el}
-                                </div>
+                                    className={styles.sliderSwitcher}
+                                    key={id}
+                                    onMouseEnter={() => onChangeSlider(idx)}
+                                />
                             )
                         })}
                     </div>
