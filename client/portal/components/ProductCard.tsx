@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectFade } from 'swiper'
+import SwiperCore, { EffectFade } from 'swiper'
 
 import 'swiper/css'
 import 'swiper/css/effect-fade'
@@ -14,13 +14,10 @@ const styles = {
 }
 
 export const ProductCard = () => {
-    // const swiper = useSwiper()
-    let swiperInstance: any = null
+    let swiperInstance: SwiperCore
 
-    const onChangeSlider = (i: any) => {
-        console.log(swiperInstance)
-        swiperInstance?.slideTo(i, 100)
-        return i
+    const onChangeSlider = (i: number) => {
+        swiperInstance.slideTo(i, 100)
     }
 
     return (
