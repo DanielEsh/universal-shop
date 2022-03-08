@@ -86,6 +86,18 @@ export const ProductCard = () => {
                         )
                     })}
                 </div>
+
+                <div className="absolute bottom-2 flex gap-x-4 w-full h-1">
+                    {
+                        [0,1].map(item => (
+                            <div 
+                                className={`flex-auto h-full ${item === currentSlideIndex ? 'bg-primary-500' : 'bg-dark-500'}`}
+                                key={item}
+                            >
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
 
             <div className="flex flex-col h-[250px]">
