@@ -23,13 +23,13 @@ const styles = {
     sliderImage: 'fader__slide absolute flex h-full bg-gray-100 text-black',
     sliderSwitcherContainer: 'absolute top-0 z-1 flex w-full h-full',
     sliderSwitcher: 'flex-auto bg-transparent',
+    sliderPagination: 'absolute bottom-2 flex gap-x-4 w-full h-[1px]',
     category: '',
     name: '',
     rating: '',
 }
 
 export const ProductCard = () => {
-    const [loaded, setLoaded] = useState<boolean>(false)
     const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0)
     const [opacities, setOpacities] = useState<number[]>([])
 
@@ -39,9 +39,6 @@ export const ProductCard = () => {
         renderMode: 'performance',
         slideChanged(slider) {
             setCurrentSlideIndex(slider.track.details.rel)
-        },
-        created() {
-            setLoaded(true)
         },
         detailsChanged(s) {
             const newOpacities = s.track.details.slides.map((slide) => slide?.portion)
@@ -87,9 +84,11 @@ export const ProductCard = () => {
                     })}
                 </div>
 
-                <div className="absolute bottom-2 flex gap-x-4 w-full h-1">
+                <div className={styles.sliderPagination}>
                     {
-                        [0,1].map(item => (
+                        [
+                            ...Array(sliderNode?.current?.track.details.slides.length).keys(),
+                        ].map(item => (
                             <div 
                                 className={`flex-auto h-full ${item === currentSlideIndex ? 'bg-primary-500' : 'bg-dark-500'}`}
                                 key={item}
