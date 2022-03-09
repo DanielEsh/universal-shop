@@ -116,7 +116,9 @@ export const ProductCard = () => {
                     <Tag>
                         Хит продаж
                     </Tag>
-                    Трейд ин
+                    <Tag color="secondary">
+                        Трейд ин
+                    </Tag>
                     Новинка
                     Кешбек 500
                 </div>

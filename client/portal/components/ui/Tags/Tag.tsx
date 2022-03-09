@@ -3,16 +3,17 @@ import {
     forwardRef,
 } from 'react'
 import { Colors, Sizes } from '@/components/ui/utils/types'
+import cn from 'classnames'
 
 export type TagProps = {
     children: ReactNode
-    color: Colors
-    size: Sizes
-    outlined: boolean
-    delitable: boolean
-    disabled: boolean
-    onClick: () => void
-    onDelete: () => void
+    color?: Colors
+    size?: Sizes
+    outlined?: boolean
+    deletable?: boolean
+    disabled?: boolean
+    onClick?: () => void
+    onDelete?: () => void
 }
 
 export const Tag = forwardRef<any, TagProps>((props, ref) => {
@@ -20,14 +21,34 @@ export const Tag = forwardRef<any, TagProps>((props, ref) => {
         children,
         color = 'primary',
         size = 'medium',
-        delitable,
-        disabled,
-        onClick,
-        onDelete,
     } = props
 
+    const colors = {
+        primary: 'bg-primary-500 text-black',
+        secondary: 'bg-dark-500 text-white',
+        gray: '',
+        success: '',
+        error: '',
+        blue: '',
+    }
+
+    const sizes = {
+        small: '',
+        medium: 'px-4 py-2',
+        large: '',
+    }
+
+    const classes = cn(
+        'inline-block rounded-md',
+        colors[color],
+        sizes[size],
+    )
+
     return (
-        <div ref={ref}>
+        <div 
+            ref={ref}
+            className={classes}
+        >
             {children}
         </div>
     )
