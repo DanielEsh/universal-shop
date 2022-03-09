@@ -24,9 +24,9 @@ const styles = {
     sliderSwitcherContainer: 'absolute top-0 z-1 flex w-full h-full',
     sliderSwitcher: 'flex-auto bg-transparent',
     sliderPagination: 'absolute bottom-2 flex gap-x-4 w-full h-[1px]',
-    category: '',
-    name: '',
-    rating: '',
+    category: 'text-sm text-gray-400',
+    name: 'text-lg',
+    rating: 'flex justify-center',
 }
 
 export const ProductCard = () => {
