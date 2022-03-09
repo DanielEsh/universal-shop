@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useKeenSlider } from 'keen-slider/react'
 import Image1 from 'public/images/hero6.jpg'
 import Image2 from 'public/images/category.png'
+import { Tag } from '@/components/ui/Tags'
 
 const mockCardInfo = {
     images: [
@@ -112,7 +113,9 @@ export const ProductCard = () => {
                 </span>
 
                 <div>
-                    Хит продаж
+                    <Tag>
+                        Хит продаж
+                    </Tag>
                     Трейд ин
                     Новинка
                     Кешбек 500
