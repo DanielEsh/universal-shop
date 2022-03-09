@@ -8,10 +8,11 @@ export type TagProps = {
     children: ReactNode
     color: Colors
     size: Sizes
-    closable: boolean
+    outlined: boolean
+    delitable: boolean
     disabled: boolean
     onClick: () => void
-    onClose: () => void
+    onDelete: () => void
 }
 
 export const Tag = forwardRef<any, TagProps>((props, ref) => {
@@ -19,10 +20,10 @@ export const Tag = forwardRef<any, TagProps>((props, ref) => {
         children,
         color = 'primary',
         size = 'medium',
-        closable,
+        delitable,
         disabled,
         onClick,
-        onClose,
+        onDelete,
     } = props
 
     return (
