@@ -22,6 +22,7 @@ export const Tag = forwardRef<any, TagProps>((props, ref) => {
         color = 'primary',
         size = 'medium',
         outlined,
+        disabled,
     } = props
 
     const colors = {
@@ -49,11 +50,12 @@ export const Tag = forwardRef<any, TagProps>((props, ref) => {
     }
 
     const classes = cn(
-        'inline-block rounded-md border',
+        'inline-block rounded-md border select-none',
         sizes[size],
         {
             [colors[color]]: !outlined,
             [outlinedColors[color]]: outlined,
+            ['cursor-not-allowed opacity-80']: disabled,
         },
     )
 
