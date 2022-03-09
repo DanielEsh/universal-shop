@@ -119,7 +119,7 @@ export const ProductCard = () => {
                     <Tag color="secondary">
                         Трейд ин
                     </Tag>
-                    <Tag color="secondary">
+                    <Tag color="secondary" outlined>
                         Новинка
                     </Tag>
                     <Tag color="secondary">
