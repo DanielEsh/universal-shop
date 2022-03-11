@@ -3,7 +3,7 @@ import { useKeenSlider } from 'keen-slider/react'
 import { HomeHeroPagination } from '@/components/blocks/home/HomeHero/HomeHeroPagination'
 import { FullSliderArrows } from '@/components/FullSliderArrows'
 
-export const HomeBannerSlider: FC = () => {
+export const HomePromosSlider: FC = () => {
     const [loaded, setLoaded] = useState<boolean>(false)
     const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0)
 
