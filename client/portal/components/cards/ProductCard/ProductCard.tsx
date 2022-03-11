@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useKeenSlider } from 'keen-slider/react'
 import Image1 from 'public/images/hero6.jpg'
 import Image2 from 'public/images/category.png'
-import { Tags, Tag } from '@/components/ui/Tags'
+import { Tag } from '@/components/ui/Tags'
 
 const mockCardInfo = {
     images: [
@@ -112,7 +112,7 @@ export const ProductCard = () => {
                     *****
                 </span>
 
-                <Tags>
+                <div className="flex flex-wrap gap-2">
                     <Tag>
                         Хит продаж
                     </Tag>
@@ -125,17 +125,21 @@ export const ProductCard = () => {
                     <Tag color="secondary" disabled>
                         Кешбек 500
                     </Tag>
-                </Tags>
+                </div>
 
                 <div className="flex mt-auto">
-                    30 000 - 5 000
-                    25 000
-
-                    <div>
-                        В корзину
-                    </div>
-                    <div>
-                        В избранное
+                    <div className="flex flex-col">
+                        <div className="flex items-center">
+                            <span className="text-sm text-gray-400 line-through">
+                            30 000
+                            </span>
+                            <span className="ml-1 text-sm text-white bg-dark-500 p-1 rounded-md">
+                            - 5 000
+                            </span>
+                        </div>
+                        <span className="text-lg">
+                            25 000
+                        </span>
                     </div>
                 </div>
             </div>
