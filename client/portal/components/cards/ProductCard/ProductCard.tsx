@@ -4,6 +4,10 @@ import { useKeenSlider } from 'keen-slider/react'
 import Image1 from 'public/images/hero6.jpg'
 import Image2 from 'public/images/category.png'
 import { Tag } from '@/components/ui/Tags'
+import { Button } from '@/components/ui/Button'
+import IconCartAdd from 'public/icons/cart-add.svg'
+import IconLike from 'public/icons/like.svg'
+import IconComporation from 'public/icons/comporation.svg'
 
 const mockCardInfo = {
     images: [
@@ -127,7 +131,7 @@ export const ProductCard = () => {
                     </Tag>
                 </div>
 
-                <div className="flex mt-auto">
+                <div className="flex flex-col mt-auto">
                     <div className="flex flex-col">
                         <div className="flex items-center">
                             <span className="text-sm text-gray-400 line-through">
@@ -140,6 +144,20 @@ export const ProductCard = () => {
                         <span className="text-lg">
                             25 000
                         </span>
+                    </div>
+
+                    <div className="flex gap-4">
+                        <Button>
+                            <IconCartAdd />
+                        </Button>
+
+                        <Button color="secondary">
+                            <IconLike />
+                        </Button>
+
+                        <Button color="secondary">
+                            <IconComporation />
+                        </Button>
                     </div>
                 </div>
             </div>
