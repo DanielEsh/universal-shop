@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { HomeHero } from '@/components/blocks/home/hero'
+import { HomeHero } from '@/components/blocks/home/HomeHero'
+import { HomePromos } from '@/components/blocks/home/HomePromos'
 import { ProductShowcase } from '@/components/ProductShowcase'
 
 const Home: NextPage = () => {
@@ -20,9 +21,7 @@ const Home: NextPage = () => {
                 <div>
                     Преимущества
                 </div>
-                <div>
-                    Слайдер с акциями + товар дня
-                </div>
+                <HomePromos />
                 <div>
                     Категории товаров
                 </div>
