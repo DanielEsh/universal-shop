@@ -18,7 +18,7 @@ export const HomePromosSlider: FC = () => {
     })
 
     return (
-        <div className="relative h-[600px] mr-5 rounded-md bg-gray-100">
+        <div className="relative w-auto h-full rounded-md bg-gray-100 overflow-hidden">
             <div ref={refCallback} className="keen-slider h-full">
                 <div className="keen-slider__slide">slide1</div>
                 <div className="keen-slider__slide">slide2</div>
