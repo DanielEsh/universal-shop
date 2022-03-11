@@ -23,8 +23,8 @@ const mockCardInfo = {
 }
 
 const styles = {
-    productCardRoot: 'bg-gray-100 w-[320px] h-[550px] p-16 rounded-md',
-    slider: 'fader relative w-full h-[250px] overflow-hidden',
+    productCardRoot: 'bg-gray-100 w-[320px] h-[600px] p-16 rounded-md',
+    slider: 'fader relative w-full h-[450px] overflow-hidden',
     sliderImage: 'fader__slide absolute flex h-full bg-gray-100 text-black',
     sliderSwitcherContainer: 'absolute top-0 z-1 flex w-full h-full',
     sliderSwitcher: 'flex-auto bg-transparent',
@@ -57,107 +57,109 @@ export const ProductCard = () => {
 
     return (
         <div className={styles.productCardRoot}>
-            <div ref={refCallback} className={styles.slider}>
-                {mockCardInfo.images.map((image, idx) => {
-                    return (
-                        <div 
-                            key={image.id}
-                            className={styles.sliderImage}
-                            style={{ opacity: opacities[idx] }}
-                        >
-                            <Image
-                                src={image.image}
-                                alt=""
-                                layout="fill"
-                                objectFit="contain"
-                            />
-                        </div>
-                    )
-                })}
-                <div 
-                    className={styles.sliderSwitcherContainer}
-                    onMouseLeave={() => onChangeSlide(0)}
-                >
-                    {mockCardInfo.images.map(({ id }, idx) => {
+            <div className="flex flex-col h-full">
+                <div ref={refCallback} className={styles.slider}>
+                    {mockCardInfo.images.map((image, idx) => {
                         return (
                             <div 
-                                className={styles.sliderSwitcher}
-                                key={id}
-                                onMouseEnter={() => onChangeSlide(idx)}
-                            />
+                                key={image.id}
+                                className={styles.sliderImage}
+                                style={{ opacity: opacities[idx] }}
+                            >
+                                <Image
+                                    src={image.image}
+                                    alt=""
+                                    layout="fill"
+                                    objectFit="contain"
+                                />
+                            </div>
                         )
                     })}
-                </div>
-
-                <div className={styles.sliderPagination}>
-                    {
-                        [
-                            ...Array(sliderNode?.current?.track.details.slides.length).keys(),
-                        ].map(item => (
-                            <div 
-                                className={`flex-auto h-full ${item === currentSlideIndex ? 'bg-primary-500' : 'bg-dark-500'}`}
-                                key={item}
-                            >
-                            </div>
-                        ))
-                    }
-                </div>
-            </div>
-
-            <div className="flex flex-col h-[250px]">
-                <span className={styles.category}>
-                    Смартфон
-                </span>
-                <span className={styles.name}>
-                    Xiaomi Redmi 9A 2/32Gb Granite Gray
-                </span>
-
-                <span className={styles.rating}>
-                    *****
-                </span>
-
-                <div className="flex flex-wrap gap-2">
-                    <Tag>
-                        Хит продаж
-                    </Tag>
-                    <Tag color="secondary">
-                        Трейд ин
-                    </Tag>
-                    <Tag color="secondary" outlined>
-                        Новинка
-                    </Tag>
-                    <Tag color="secondary" disabled>
-                        Кешбек 500
-                    </Tag>
-                </div>
-
-                <div className="flex flex-col mt-auto">
-                    <div className="flex flex-col">
-                        <div className="flex items-center">
-                            <span className="text-sm text-gray-400 line-through">
-                            30 000
-                            </span>
-                            <span className="ml-1 text-sm text-white bg-dark-500 p-1 rounded-md">
-                            - 5 000
-                            </span>
-                        </div>
-                        <span className="text-lg">
-                            25 000
-                        </span>
+                    <div 
+                        className={styles.sliderSwitcherContainer}
+                        onMouseLeave={() => onChangeSlide(0)}
+                    >
+                        {mockCardInfo.images.map(({ id }, idx) => {
+                            return (
+                                <div 
+                                    className={styles.sliderSwitcher}
+                                    key={id}
+                                    onMouseEnter={() => onChangeSlide(idx)}
+                                />
+                            )
+                        })}
                     </div>
 
-                    <div className="flex gap-4">
-                        <Button>
-                            <IconCartAdd />
-                        </Button>
+                    <div className={styles.sliderPagination}>
+                        {
+                            [
+                                ...Array(sliderNode?.current?.track.details.slides.length).keys(),
+                            ].map(item => (
+                                <div 
+                                    className={`flex-auto h-full ${item === currentSlideIndex ? 'bg-primary-500' : 'bg-dark-500'}`}
+                                    key={item}
+                                >
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
 
-                        <Button color="secondary">
-                            <IconLike />
-                        </Button>
+                <div className="flex flex-col h-full">
+                    <span className={styles.category}>
+                    Смартфон
+                    </span>
+                    <span className={styles.name}>
+                    Xiaomi Redmi 9A 2/32Gb Granite Gray
+                    </span>
 
-                        <Button color="secondary">
-                            <IconComporation />
-                        </Button>
+                    <span className={styles.rating}>
+                    *****
+                    </span>
+
+                    <div className="flex flex-wrap gap-2">
+                        <Tag>
+                        Хит продаж
+                        </Tag>
+                        <Tag color="secondary">
+                        Трейд ин
+                        </Tag>
+                        <Tag color="secondary" outlined>
+                        Новинка
+                        </Tag>
+                        <Tag color="secondary" disabled>
+                        Кешбек 500
+                        </Tag>
+                    </div>
+
+                    <div className="flex flex-col mt-auto">
+                        <div className="flex flex-col">
+                            <div className="flex items-center">
+                                <span className="text-sm text-gray-400 line-through">
+                            30 000
+                                </span>
+                                <span className="ml-1 text-sm text-white bg-dark-500 p-1 rounded-md">
+                            - 5 000
+                                </span>
+                            </div>
+                            <span className="text-lg">
+                            25 000
+                            </span>
+                        </div>
+
+                        <div className="flex gap-4">
+                            <Button>
+                                <IconCartAdd />
+                            </Button>
+
+                            <Button color="secondary">
+                                <IconLike />
+                            </Button>
+
+                            <Button color="secondary">
+                                <IconComporation />
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </div>
