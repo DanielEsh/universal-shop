@@ -21,6 +21,19 @@ a {
 @tailwind utilities;
 
 
+html::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  display: block;
+  background: white;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 5px;
+}
+
+
 .fader {
   position: relative;
   overflow: hidden;
