@@ -5,6 +5,7 @@ import { HomeHero } from '@/components/blocks/home/HomeHero'
 import { HomePromos } from '@/components/blocks/home/HomePromos'
 import { ProductShowcase } from '@/components/ProductShowcase'
 import { PopularCategories } from '@/components/blocks/home/PopularCategories'
+import { PopularNews } from '@/components/PopularNews'
 
 const Home: NextPage = () => {
     return (
@@ -27,9 +28,7 @@ const Home: NextPage = () => {
                 <div>
                     Новые товары
                 </div>
-                <div>
-                    Новости
-                </div>
+                <PopularNews />
                 <div>
                     Подписаться на рассылку
                 </div>
