@@ -6,6 +6,7 @@ import { HomePromos } from '@/components/blocks/home/HomePromos'
 import { ProductShowcase } from '@/components/ProductShowcase'
 import { PopularCategories } from '@/components/blocks/home/PopularCategories'
 import { PopularNews } from '@/components/PopularNews'
+import { Subscribe } from '@/components/Subscribe'
 
 const Home: NextPage = () => {
     return (
@@ -29,9 +30,7 @@ const Home: NextPage = () => {
                     Новые товары
                 </div>
                 <PopularNews />
-                <div>
-                    Подписаться на рассылку
-                </div>
+                <Subscribe />
                 <div>
                     Footer
                 </div>
