@@ -76,3 +76,9 @@ a {
   grid-column: span 3;
   grid-row: span 1;
 }
+
+footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 0;
+}

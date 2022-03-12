@@ -31,9 +31,6 @@ const Home: NextPage = () => {
                 </div>
                 <PopularNews />
                 <Subscribe />
-                <div>
-                    Footer
-                </div>
             </div>
         </div>
     )
