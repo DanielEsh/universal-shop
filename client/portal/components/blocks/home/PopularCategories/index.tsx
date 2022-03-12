@@ -6,7 +6,17 @@ export const PopularCategories = () => {
         <div>
             Popular Categories
 
-            <div>
+            <div className="grid gap-8 grid-cols-5">
+                <PopularCategoriesCard />
+                <PopularCategoriesCard />
+                <PopularCategoriesCard />
+                <PopularCategoriesCard />
+                <PopularCategoriesCard />
+
+                <PopularCategoriesCard />
+                <PopularCategoriesCard />
+                <PopularCategoriesCard />
+                <PopularCategoriesCard />
                 <PopularCategoriesCard />
             </div>
         </div>
