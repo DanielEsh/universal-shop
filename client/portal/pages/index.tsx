@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { HomeHero } from '@/components/blocks/home/HomeHero'
 import { HomePromos } from '@/components/blocks/home/HomePromos'
 import { ProductShowcase } from '@/components/ProductShowcase'
+import { PopularCategories } from '@/components/blocks/home/PopularCategories'
 
 const Home: NextPage = () => {
     return (
@@ -22,9 +23,7 @@ const Home: NextPage = () => {
                     Преимущества
                 </div>
                 <HomePromos />
-                <div>
-                    Категории товаров
-                </div>
+                <PopularCategories />
                 <div>
                     Новые товары
                 </div>
