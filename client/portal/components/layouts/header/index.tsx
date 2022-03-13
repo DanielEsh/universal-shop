@@ -20,6 +20,7 @@ export const Header = () => {
 
     const onScroll = () => {
         checkVisibility()
+        lastScrollPosition = window.pageYOffset
     }
 
     const checkVisibility = () => {
@@ -39,10 +40,6 @@ export const Header = () => {
             setIsFixedPosition(false)
             setIsMenuVisible(true)
         }
-
-        lastScrollPosition = window.pageYOffset
-
-        // console.log(lastScrollPosition, window.pageYOffset)
     }
 
     const classes = cn(
