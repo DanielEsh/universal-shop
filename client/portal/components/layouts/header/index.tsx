@@ -4,7 +4,11 @@ import { MainHeader } from './MainHeader'
 import { MenuHeader } from './MenuHeader'
 
 export const Header = () => {
-    const [isFixed, setIsFixed] = useState<boolean>(false)
+    const [isFixedPosition, setIsFixedPosition] = useState<boolean>(false)
+    const [isMenuVisible, setIsMenuVisible] = useState<boolean>(true)
+
+    const SCROLL_THRESHOLD = 600
+    let lastScrollPosition = 0
 
     useEffect(() => {
         document.addEventListener('scroll', onScroll)
@@ -19,18 +23,33 @@ export const Header = () => {
     }
 
     const checkVisibility = () => {
-        if (window.pageYOffset > 800) {
-            setIsFixed(true)
+        if (window.pageYOffset > SCROLL_THRESHOLD) {
+            // scroll up
+            if (window.pageYOffset < lastScrollPosition) {
+                setIsFixedPosition(true)
+                setIsMenuVisible(true)
+            }
+
+            // scroll down
+            if (window.pageYOffset > lastScrollPosition) {
+                setIsFixedPosition(true)
+                setIsMenuVisible(false)
+            }
         } else {
-            setIsFixed(false)
+            setIsFixedPosition(false)
+            setIsMenuVisible(true)
         }
+
+        lastScrollPosition = window.pageYOffset
+
+        // console.log(lastScrollPosition, window.pageYOffset)
     }
 
     const classes = cn(
         'top-0 left-0 w-full z-10',
         {
-            ['absolute']: !isFixed,
-            ['fixed']: isFixed,
+            ['absolute']: !isFixedPosition,
+            ['fixed']: isFixedPosition,
         },
     )
 
@@ -38,7 +57,7 @@ export const Header = () => {
         <header className={classes}>
             <MainHeader />
             {
-                !isFixed && <MenuHeader />
+                isMenuVisible && <MenuHeader />
             }
         </header>
     )
