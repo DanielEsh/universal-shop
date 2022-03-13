@@ -5,12 +5,14 @@ import { Colors } from '@/components/ui/utils/types'
 type LinkProps = {
     children: ReactNode
     color?: Colors
+    className?: string
 }
 
 export const Link: FC<LinkProps> = (props) => {
     const { 
         children,
         color = 'primary',
+        className,
     } = props
 
     const colors = {
@@ -20,11 +22,13 @@ export const Link: FC<LinkProps> = (props) => {
         blue: '',
         error: '',
         success: '',
+        currentColor: 'text-currentColor',
     }
 
     const classes = classNames(
         'group overflow-hidden',
         colors[color],
+        className,
     )
 
     return (

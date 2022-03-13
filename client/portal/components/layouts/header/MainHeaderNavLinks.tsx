@@ -18,7 +18,7 @@ export const MainHeaderNavLinks = () => {
             {
                 LINKS.map(({ name }, index) => (
                     <Link 
-                        color="secondary"
+                        color="currentColor"
                         key={index}
                     >
                         {name}
