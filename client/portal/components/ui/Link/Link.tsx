@@ -4,7 +4,7 @@ import { Colors } from '@/components/ui/utils/types'
 
 type LinkProps = {
     children: ReactNode
-    href: string,
+    href?: string,
     color?: Colors
     className?: string
 }

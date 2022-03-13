@@ -1,3 +1,4 @@
+import NextLink from 'next/link'
 import { Link } from '@/components/ui/Link'
 
 const LINKS = [
@@ -20,13 +21,14 @@ export const MainHeaderNavLinks = () => {
         <div className="flex gap-6">
             {
                 LINKS.map(({ name, link }, index) => (
-                    <Link 
-                        href={link}
-                        color="currentColor"
-                        key={index}
-                    >
-                        {name}
-                    </Link>
+                    <NextLink key={index} href={link} passHref>
+                        <Link 
+                            color="currentColor"
+                        >
+                            {name}
+                        </Link>
+                    </NextLink>
+                    
                 ))
             }
         </div>
