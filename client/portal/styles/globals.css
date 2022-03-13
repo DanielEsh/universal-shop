@@ -115,6 +115,21 @@ footer {
   transition: opacity .3s, transform .3s;
 }
 
+.header-banner-enter {
+  transform: translateY(0);
+}
+.fixed-header-enter-active {
+  transform: translateY(56px);
+  transition: transform .3s;
+}
+.fixed-header-exit {
+  transform: translateY(0);
+}
+.fixed-header-exit-active {
+  transform: translateY(56px);
+  transition: transform .3s;
+}
+
 .icon-big {
   width: 24px;
   height: 24px;
