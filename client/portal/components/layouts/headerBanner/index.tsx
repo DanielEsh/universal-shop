@@ -23,7 +23,7 @@ export const HeaderBanner: FC<Props> = ({
 
     return (
         <a 
-            className="block w-full h-[56px] bg-primary-200"
+            className="block w-full h-[56px] bg-gradient-to-r from-blue-500 to-blue-400"
             href="/test"
         >
             <div className="relative flex justify-center items-center h-full container mx-auto">
