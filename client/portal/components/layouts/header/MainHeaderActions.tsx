@@ -47,7 +47,7 @@ export const MainHeaderActions = () => {
                 ACTIONS.map(({ id, icon, name }) => (
                     <div 
                         key={id}
-                        className="group flex items-center justify-center flex-col px-4 py-3.5 bg-blue-400 transition ease delay-150 hover:bg-primary-500"
+                        className="group flex items-center justify-center flex-col px-4 py-3.5 transition ease delay-150 hover:bg-dark-500"
                     >
                         <span className="text-black transition ease delay-150 group-hover:scale-150">{icon()}</span>
                         <span className="text-sm mt-1">{name}</span>
