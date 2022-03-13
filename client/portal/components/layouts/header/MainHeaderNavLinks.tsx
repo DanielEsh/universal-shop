@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from '@/components/ui/Link'
 
 const LINKS = [
     {
@@ -17,9 +17,12 @@ export const MainHeaderNavLinks = () => {
         <div className="flex gap-6">
             {
                 LINKS.map(({ name }, index) => (
-                    <div key={index}>
+                    <Link 
+                        color="secondary"
+                        key={index}
+                    >
                         {name}
-                    </div>
+                    </Link>
                 ))
             }
         </div>
