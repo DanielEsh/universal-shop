@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { Button } from '@/components/ui/Button'
+import { MainHeaderActions } from '@/components/layouts/header/MainHeaderActions'
 
 export const MainHeader = () => {
     return (
@@ -18,31 +20,11 @@ export const MainHeader = () => {
                     </Link>
                 </div>
 
-                <div
-                    className="flex items-center justify-center w-7 h-6 mr-6 rounded bg-primary-500 cursor-pointer"
-                >
+                <Button>
                     Каталог
-                </div>
+                </Button>
 
-                <div className="w-[680px] mr-6">Поиск</div>
-
-                <div className="flex items-center ml-auto">
-                    <div className="flex items-center justify-center flex-col mr-3">
-                        <span>Вход</span>
-                    </div>
-
-                    <div className="flex items-center justify-center flex-col mr-3">
-                        <span>Сравнение</span>
-                    </div>
-
-                    <div className="flex items-center justify-center flex-col mr-3">
-                        <span>Избранное</span>
-                    </div>
-
-                    <div className="flex items-center justify-center flex-col mr-3">
-                        <span>Корзина</span>
-                    </div>
-                </div>
+                <MainHeaderActions />
             </div>
         </>
     )
