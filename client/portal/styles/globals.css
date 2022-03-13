@@ -114,3 +114,8 @@ footer {
   transform: translateY(-40px);
   transition: opacity .3s, transform .3s;
 }
+
+.icon-big {
+  width: 24px;
+  height: 24px;
+}
