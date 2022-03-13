@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import cn from 'classnames'
+import { CSSTransition } from 'react-transition-group'
 import { MainHeader } from './MainHeader'
 import { MenuHeader } from './MenuHeader'
 
@@ -43,19 +44,28 @@ export const Header = () => {
     }
 
     const classes = cn(
-        'top-0 left-0 w-full z-10',
+        'top-0 left-0 w-full z-10 transition-all duration-300 ease',
         {
             ['absolute']: !isFixedPosition,
             ['fixed backdrop-blur-sm dark:bg-dark-300/80 dark:text-white']: isFixedPosition,
+            ['h-[110px]']: isMenuVisible,
+            ['h-[76px]']: !isMenuVisible,
         },
     )
 
     return (
         <header className={classes}>
             <MainHeader />
-            {
-                isMenuVisible && <MenuHeader />
-            }
+
+            <CSSTransition
+                in={isMenuVisible}
+                timeout={300}
+                classNames="fixed-header"
+                unmountOnExit
+                mountOnEnter
+            >
+                <MenuHeader />
+            </CSSTransition>
         </header>
     )
 }

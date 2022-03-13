@@ -95,3 +95,22 @@ footer {
   bottom: 0;
   z-index: 0;
 }
+
+.fixed-header-enter {
+  transform: translateY(-40px);
+  opacity: 0;
+}
+.fixed-header-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .3s, transform .3s;
+}
+.fixed-header-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fixed-header-exit-active {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity .3s, transform .3s;
+}
