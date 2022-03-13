@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/Button'
 import { MainHeaderNavLinks } from '@/components/layouts/header/MainHeaderNavLinks'
 import { MainHeaderActions } from '@/components/layouts/header/MainHeaderActions'
 
+
 export const MainHeader = () => {
     return (
         <>
@@ -26,11 +27,6 @@ export const MainHeader = () => {
                 </Button>
 
                 <MainHeaderNavLinks />
-
-                <div>
-                    8 (495) 228-27-36
-                    Пн-Пт 9-21, Сб-Вс 9-20
-                </div>
 
                 <MainHeaderActions />
             </div>

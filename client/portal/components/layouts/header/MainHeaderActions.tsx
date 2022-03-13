@@ -1,3 +1,4 @@
+import { PhoneWithWorkSchedule } from '@/components/PhoneWithWorkSchedule'
 import IconCart from 'public/icons/cart.svg'
 import IconLike from 'public/icons/like.svg'
 import IconComporation from 'public/icons/comporation.svg'
@@ -41,6 +42,7 @@ const ACTIONS: Array<ActionsType> = [
 export const MainHeaderActions = () => {
     return (
         <div className="flex items-center ml-auto">
+            <PhoneWithWorkSchedule className="mr-6" />
             {
                 ACTIONS.map(({ id, icon, name }) => (
                     <div 
