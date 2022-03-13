@@ -46,7 +46,7 @@ export const Header = () => {
         'top-0 left-0 w-full z-10',
         {
             ['absolute']: !isFixedPosition,
-            ['fixed']: isFixedPosition,
+            ['fixed dark:bg-dark-300/80 dark:text-white']: isFixedPosition,
         },
     )
 

@@ -12,7 +12,7 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => (
         <HeaderBanner />
         <div className="relative">
             <Header />
-            <main className="relative bg-white z-[1]">{children}</main>
+            <main className="relative bg-white z-[1] dark:bg-dark-500">{children}</main>
             <Footer />
         </div>
     </>
