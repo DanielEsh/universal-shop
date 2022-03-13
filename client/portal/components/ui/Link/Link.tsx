@@ -4,6 +4,7 @@ import { Colors } from '@/components/ui/utils/types'
 
 type LinkProps = {
     children: ReactNode
+    href: string,
     color?: Colors
     className?: string
 }
@@ -11,6 +12,7 @@ type LinkProps = {
 export const Link: FC<LinkProps> = (props) => {
     const { 
         children,
+        href,
         color = 'primary',
         className,
     } = props
@@ -32,7 +34,10 @@ export const Link: FC<LinkProps> = (props) => {
     )
 
     return (
-        <a className={classes}>
+        <a 
+            href={href}
+            className={classes}
+        >
             {children}
             <span className="block w-full h-[2px] bg-currentColor rounded-md -translate-x-full  group-hover:translate-x-0 transition-transform ease-in-out delay-150"/>
         </a>
