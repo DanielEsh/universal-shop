@@ -24,6 +24,17 @@ export const MainHeader = () => {
                     Каталог
                 </Button>
 
+                <div>
+                    Способы покупки
+                    О компании
+                    Доставка
+                </div>
+
+                <div>
+                    8 (495) 228-27-36
+                    Пн-Пт 9-21, Сб-Вс 9-20
+                </div>
+
                 <MainHeaderActions />
             </div>
         </>
