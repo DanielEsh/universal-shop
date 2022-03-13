@@ -4,6 +4,10 @@ module.exports = {
         './components/**/*.{ts,tsx}',
     ],
     theme: {
+        fontFamily: {
+            sans: ['Graphik'],
+            secondary: ['SF Pro Display'],
+        },
         colors: {
             primary: {
                 '100': '#fef3c7',
