@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
+import { MainHeaderNavLinks } from '@/components/layouts/header/MainHeaderNavLinks'
 import { MainHeaderActions } from '@/components/layouts/header/MainHeaderActions'
 
 export const MainHeader = () => {
@@ -20,15 +21,11 @@ export const MainHeader = () => {
                     </Link>
                 </div>
 
-                <Button>
+                <Button className="mr-6">
                     Каталог
                 </Button>
 
-                <div>
-                    Способы покупки
-                    О компании
-                    Доставка
-                </div>
+                <MainHeaderNavLinks />
 
                 <div>
                     8 (495) 228-27-36
