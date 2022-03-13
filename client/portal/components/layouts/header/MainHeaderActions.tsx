@@ -6,34 +6,28 @@ import IconUser from 'public/icons/user.svg'
 import IconSearch from 'public/icons/search.svg'
 
 type ActionsType = {
-    id: number
     icon: () => JSX.Element
     name: string
 }
 
 const ACTIONS: Array<ActionsType> = [
     {
-        id: 1,
         icon: IconSearch,
         name: 'Поиск',
     },
     {
-        id: 2,
         icon: IconUser,
         name: 'Вход',
     },
     {
-        id: 3,
         icon: IconComporation,
         name: 'Сравнение',
     },
     {
-        id: 4,
         icon: IconLike,
         name: 'Избранное',
     },
     {
-        id: 5,
         icon: IconCart,
         name: 'Корзина',
     },
@@ -44,12 +38,12 @@ export const MainHeaderActions = () => {
         <div className="flex items-center ml-auto">
             <PhoneWithWorkSchedule className="mr-6" />
             {
-                ACTIONS.map(({ id, icon, name }) => (
+                ACTIONS.map(({ icon, name }, index) => (
                     <div 
-                        key={id}
-                        className="group flex items-center justify-center flex-col px-4 py-3.5 hover:bg-dark-500 hover:text-white"
+                        key={index}
+                        className="group flex items-center justify-center flex-col px-4 py-3.5 transition-color hover:bg-dark-500 hover:text-white"
                     >
-                        <span className="icon-big group-hover:scale-150">{icon()}</span>
+                        <span className="icon-big transition-transform group-hover:scale-150">{icon()}</span>
                         <span className="text-sm mt-1">{name}</span>
                     </div>
                 ))
