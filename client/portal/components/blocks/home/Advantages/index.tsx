@@ -7,41 +7,41 @@ import IconFastTime from 'public/icons/fast-time.svg'
 
 export const Advantages = () => {
     return (
-        <div className="bg-gray-200">
-            <div className="container mx-auto text-black">
+        <div className="bg-gray-200 dark:bg-dark-500 pb-6 pt-6">
+            <div className="container mx-auto text-black dark:text-white">
                 <div className="grid grid-cols-6">
                     <div className="flex flex-col items-center p-6">
-                        <IconPackage className="w-[64px] h-[64px] text-black" />
+                        <IconPackage className="w-[64px] h-[64px] text-black dark:text-primary-500" />
                         <span className="mt-4 text-center">
                             Широкий ассортимент
                         </span>
                     </div>
                     <div className="flex flex-col items-center p-6">
-                        <IconReward className="w-[64px] h-[64px] text-black" />
+                        <IconReward className="w-[64px] h-[64px] text-black dark:text-primary-500" />
                         <span className="mt-4 text-center">
                             Гарантия качества
                         </span>
                     </div>
                     <div className="flex flex-col items-center p-6">
-                        <IconCoinDollar className="w-[64px] h-[64px] text-black" />
+                        <IconCoinDollar className="w-[64px] h-[64px] text-black dark:text-primary-500" />
                         <span className="mt-4 text-center">
                             Бонусы за покупки
                         </span>
                     </div>
                     <div className="flex flex-col justify-center items-center p-6">
-                        <IconLocation className="w-[64px] h-[64px] text-black" />
+                        <IconLocation className="w-[64px] h-[64px] text-black dark:text-primary-500" />
                         <span className="mt-4 text-center">
                             Удобные пункты самовывоза
                         </span>
                     </div>
                     <div className="flex flex-col items-center p-6">
-                        <IconStar className="w-[64px] h-[64px] text-black" />
+                        <IconStar className="w-[64px] h-[64px] text-black dark:text-primary-500" />
                         <span className="mt-4 text-center">
                             Премиум-сервис
                         </span>
                     </div>
                     <div className="flex flex-col items-center p-6">
-                        <IconFastTime className="w-[64px] h-[64px] text-black" />
+                        <IconFastTime className="w-[64px] h-[64px] text-black dark:text-primary-500" />
                         <span className="mt-4 text-center">
                             Быстрое оформление заказа
                         </span>
