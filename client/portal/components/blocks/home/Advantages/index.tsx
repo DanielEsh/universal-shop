@@ -10,29 +10,41 @@ export const Advantages = () => {
         <div className="bg-gray-200">
             <div className="container mx-auto text-black">
                 <div className="grid grid-cols-6">
-                    <div>
-                        <IconPackage />
-                        Широкий ассортимент
+                    <div className="flex flex-col items-center p-6">
+                        <IconPackage className="w-[64px] h-[64px] text-black" />
+                        <span className="mt-4 text-center">
+                            Широкий ассортимент
+                        </span>
                     </div>
-                    <div>
-                        <IconReward />
-                        Гарантия качества
+                    <div className="flex flex-col items-center p-6">
+                        <IconReward className="w-[64px] h-[64px] text-black" />
+                        <span className="mt-4 text-center">
+                            Гарантия качества
+                        </span>
                     </div>
-                    <div>
-                        <IconCoinDollar />
-                        Бонусы за покупки
+                    <div className="flex flex-col items-center p-6">
+                        <IconCoinDollar className="w-[64px] h-[64px] text-black" />
+                        <span className="mt-4 text-center">
+                            Бонусы за покупки
+                        </span>
                     </div>
-                    <div>
-                        <IconLocation />
-                        Удобные пункты самовывоза
+                    <div className="flex flex-col justify-center items-center p-6">
+                        <IconLocation className="w-[64px] h-[64px] text-black" />
+                        <span className="mt-4 text-center">
+                            Удобные пункты самовывоза
+                        </span>
                     </div>
-                    <div>
-                        <IconStar />
-                        Премиум-сервис
+                    <div className="flex flex-col items-center p-6">
+                        <IconStar className="w-[64px] h-[64px] text-black" />
+                        <span className="mt-4 text-center">
+                            Премиум-сервис
+                        </span>
                     </div>
-                    <div>
-                        <IconFastTime />
-                        Быстрое оформление заказа
+                    <div className="flex flex-col items-center p-6">
+                        <IconFastTime className="w-[64px] h-[64px] text-black" />
+                        <span className="mt-4 text-center">
+                            Быстрое оформление заказа
+                        </span>
                     </div>
                 </div>
             </div>
