@@ -31,7 +31,7 @@ export const ProductShowcase: FC<props> = ({ title, renderTabs }) => {
                 <ProductCard />
                 <ProductCard />
 
-                <div className="absolute bottom-0 flex justify-center items-center  w-full h-[50px] shadow">
+                <div className="absolute bottom-0 flex justify-center items-center  w-full h-[50px] bg-gradient-to-t from-dark-500 transparent">
                     <div className="flex justify-center items-center w-[44px] h-[44px] bg-primary-500 rounded-full">
                         <IconArrowDown />
                     </div>
