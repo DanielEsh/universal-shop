@@ -1,14 +1,24 @@
-import React from 'react'
+import { ReactNode } from 'react'
 
-export const AdvantagesCard = () => {
+type Props = {
+    title: string
+    icon: ReactNode
+    description: string
+}
+
+export const AdvantagesCard = ({ title, icon, description }: Props) => {
     return (
         <div className="bg-primary-400 p-[60px] flex flex-col justify-center items-center">
-            <h2>Card title</h2>
-            <span>
-            CardIcon
+            <h2 className="text-lg mb-[34px]">
+                {title}
+            </h2>
+
+            <span className="w-[84px] h-[84px]">
+                {icon}
             </span>
-            <p>
-            CardDescription
+
+            <p className="opacity-0">
+                {description}
             </p>
         </div>
     )
