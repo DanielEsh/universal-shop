@@ -13,6 +13,8 @@ const AdnvatagesMock = [
         title: 'Широкий ассортимент',
         icon: IconPackage,
         description: 'В нашем магазине представленно более 5000 разных товаров',
+        buttonText: 'В каталог',
+        buttonLink: '',
     },
     {
         id: 2,
@@ -31,6 +33,8 @@ const AdnvatagesMock = [
         title: 'Удобные пункты самовывоза',
         icon: IconLocation,
         description: 'Более 2500 пунктов выдачи. Вы всегда найдете ближайший к вам.',
+        buttonText: 'Посмотреть на карте',
+        buttonLink: '',
     },
     {
         id: 5,
@@ -51,7 +55,7 @@ export const AdvantagesNew = () => {
         <div className="bg-light-500 dark:bg-dark-400 dark:text-light-500 py-[80px]">
             <div className="container mx-auto">
                 
-                <h2 className="text-4xl mb-[40px]" >
+                <h2 className="text-4xl font-bold mb-[40px]" >
                     <span dangerouslySetInnerHTML={{ __html: 'Наши стандарты &nbsp;' }} />
                     <span className="relative inline-block p-2 before:block before:absolute before:-inset-1 before:skew-y-3 before:rounded-md before:bg-primary-500">
                         <span className="relative text-black">
@@ -62,12 +66,14 @@ export const AdvantagesNew = () => {
 
                 <div className="grid grid-cols-3">
                     {
-                        AdnvatagesMock.map(({ id, title, icon, description }) => (
+                        AdnvatagesMock.map(({ id, title, icon, description, buttonText, buttonLink }) => (
                             <AdvantagesCard 
                                 key={id}
                                 title={title}
                                 icon={icon()}
                                 description={description}
+                                buttonText={buttonText}
+                                buttonLink={buttonLink}
                             />
                         ))
                     }
