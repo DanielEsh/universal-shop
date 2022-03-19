@@ -50,7 +50,7 @@ const AdnvatagesMock = [
     },
 ]
 
-export const AdvantagesNew = () => {
+export const Advantages = () => {
     return (
         <div className="bg-light-500 dark:bg-dark-400 dark:text-light-500 py-[80px]">
             <div className="container mx-auto">
