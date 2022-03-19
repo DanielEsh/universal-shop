@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { HomeHero } from '@/components/blocks/home/HomeHero'
 import { Advantages } from '@/components/blocks/home/Advantages/Advantages'
 import { HomePromos } from '@/components/blocks/home/HomePromos'
-import { ProductShowcase } from '@/components/ProductShowcase'
+import { BestSalles } from '@/components/blocks/BestSalles'
 import { PopularCategories } from '@/components/blocks/home/PopularCategories'
 import { PopularNews } from '@/components/PopularNews'
 import { Partners } from '@/components/blocks/home/Partners'
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
             <Advantages />
 
             <div className="flex flex-col container mx-auto">
-                <ProductShowcase title="Хит продаж" />
+                <BestSalles />
                 <HomePromos />
                 <PopularCategories />
                 <PopularNews />

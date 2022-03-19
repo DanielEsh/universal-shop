@@ -3,7 +3,7 @@ import { ProductCard } from '@/components/cards/ProductCard/ProductCard'
 import IconArrowDown from 'public/icons/arrow-down.svg'
 
 type props = {
-    title?: string
+    title?: ReactNode
     renderTabs?: ReactNode
 }
 
