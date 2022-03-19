@@ -20,9 +20,9 @@ const Home: NextPage = () => {
             </Head>
 
             <HomeHero />
+            <AdvantagesNew />
 
             <div className="flex flex-col container mx-auto">
-                <AdvantagesNew />
                 <ProductShowcase title="Хит продаж" />
                 <HomePromos />
                 <PopularCategories />

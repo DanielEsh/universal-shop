@@ -48,21 +48,27 @@ const AdnvatagesMock = [
 
 export const AdvantagesNew = () => {
     return (
-        <div className="bg-light-500">
-            New Advantages
-            <div className="grid grid-cols-3">
-                {
-                    AdnvatagesMock.map(({ id, title, icon, description }) => (
-                        <AdvantagesCard 
-                            key={id}
-                            title={title}
-                            icon={icon()}
-                            description={description}
-                        />
-                    ))
-                }
-            </div>
+        <div className="bg-light-500 dark:bg-dark-400 dark:text-light-500 py-[80px]">
+            <div className="container mx-auto">
+                
+                <h2 className="text-4xl mb-[40px]">
+                    Наши стандарты 
+                </h2>
+
+                <div className="grid grid-cols-3">
+                    {
+                        AdnvatagesMock.map(({ id, title, icon, description }) => (
+                            <AdvantagesCard 
+                                key={id}
+                                title={title}
+                                icon={icon()}
+                                description={description}
+                            />
+                        ))
+                    }
+                </div>
             
+            </div>
         </div>
     )
 }
