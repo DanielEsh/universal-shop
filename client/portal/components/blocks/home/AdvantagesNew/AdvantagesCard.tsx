@@ -8,7 +8,16 @@ type Props = {
 
 export const AdvantagesCard = ({ title, icon, description }: Props) => {
     return (
-        <div className="group dark:bg-dark-400 dark:text-white p-[60px] border-t-[1px] border-r-[1px] border-dark-300 flex flex-col justify-center items-center transition-all ease-in-out duration-300 hover:bg-primary-400 hover:text-black hover:scale-[1.1] hover:border-primary-400">
+        <div className="group 
+            relative
+            dark:bg-dark-400 dark:text-white p-[60px] 
+            border-t-[1px] border-r-[1px] border-dark-300 
+            flex flex-col justify-center items-center 
+            transition-all ease-in-out duration-300 
+            hover:bg-primary-400 hover:text-dark-400 hover:scale-[1.1] hover:border-primary-400
+            before:content-[''] before:absolute before:z-2 before:-top-[32px] before:-right-[32px] before:w-[64px] before:h-[64px] before:border-[24px] before:border-dark-400 before:bg-primary-400
+        "
+        >
             <h2 className="text-lg mb-[64px]">
                 {title}
             </h2>

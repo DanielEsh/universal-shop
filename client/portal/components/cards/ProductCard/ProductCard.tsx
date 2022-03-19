@@ -56,7 +56,7 @@ export const ProductCard = () => {
     }
 
     return (
-        <div className="bg-gray-100 w-[320px] h-[600px] p-16 rounded-md dark:bg-opacity-20">
+        <div className="bg-gray-100 w-[320px] h-[600px] p-16 rounded-md dark:bg-dark-400">
             <div className="flex flex-col h-full">
                 <div ref={refCallback} className={styles.slider}>
                     {mockCardInfo.images.map((image, idx) => {
