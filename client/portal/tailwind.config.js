@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
     content: [
         './pages/**/*.{ts,tsx}',
@@ -67,5 +70,9 @@ module.exports = {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        plugin(({ addVariant }) => {
+            addVariant('third', '&:nth-child(3n)')
+        }),
+    ],
 }
