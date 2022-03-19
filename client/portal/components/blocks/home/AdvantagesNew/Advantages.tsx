@@ -51,8 +51,13 @@ export const AdvantagesNew = () => {
         <div className="bg-light-500 dark:bg-dark-400 dark:text-light-500 py-[80px]">
             <div className="container mx-auto">
                 
-                <h2 className="text-4xl mb-[40px]">
-                    Наши стандарты 
+                <h2 className="text-4xl mb-[40px]" >
+                    <span dangerouslySetInnerHTML={{ __html: 'Наши стандарты &nbsp;' }} />
+                    <span className="relative inline-block p-2 before:block before:absolute before:-inset-1 before:skew-y-3 before:rounded-md before:bg-primary-500">
+                        <span className="relative text-black">
+                            качества
+                        </span>
+                    </span>
                 </h2>
 
                 <div className="grid grid-cols-3">
