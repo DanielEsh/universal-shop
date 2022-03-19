@@ -1,5 +1,6 @@
 import React from 'react'
 import { AdvantagesCard } from './AdvantagesCard'
+import { ColoredTitle } from '@/components/ui/Typography/ColoredTitle'
 import IconPackage from 'public/icons/package.svg'
 import IconReward from 'public/icons/reward.svg'
 import IconCoinDollar from 'public/icons/coin-dollar.svg'
@@ -54,15 +55,12 @@ export const Advantages = () => {
     return (
         <div className="bg-light-500 dark:bg-dark-400 dark:text-light-500 py-[80px]">
             <div className="container mx-auto">
-                
-                <h2 className="text-4xl font-bold mb-[80px]" >
-                    <span dangerouslySetInnerHTML={{ __html: 'Наши стандарты &nbsp;' }} />
-                    <span className="relative inline-block p-2 before:block before:absolute before:-inset-1 before:skew-y-3 before:rounded-md before:bg-primary-500">
-                        <span className="relative text-black">
-                            качества
-                        </span>
-                    </span>
-                </h2>
+
+                <ColoredTitle 
+                    className="mb-[80px]"
+                    label="Наши стандарты &nbsp;"
+                    colored="качества"
+                />
 
                 <div className="grid grid-cols-3">
                     {
