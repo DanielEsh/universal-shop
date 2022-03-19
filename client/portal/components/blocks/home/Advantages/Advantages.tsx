@@ -55,7 +55,7 @@ export const Advantages = () => {
         <div className="bg-light-500 dark:bg-dark-400 dark:text-light-500 py-[80px]">
             <div className="container mx-auto">
                 
-                <h2 className="text-4xl font-bold mb-[40px]" >
+                <h2 className="text-4xl font-bold mb-[80px]" >
                     <span dangerouslySetInnerHTML={{ __html: 'Наши стандарты &nbsp;' }} />
                     <span className="relative inline-block p-2 before:block before:absolute before:-inset-1 before:skew-y-3 before:rounded-md before:bg-primary-500">
                         <span className="relative text-black">
