@@ -58,7 +58,7 @@ export const Advantages = () => {
 
                 <ColoredTitle 
                     className="mb-[80px]"
-                    label="Наши стандарты &nbsp;"
+                    label="Наши стандарты"
                     colored="качества"
                 />
 
