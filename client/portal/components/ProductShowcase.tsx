@@ -20,7 +20,7 @@ export const ProductShowcase: FC<props> = ({ title, renderTabs }) => {
                 </div>
             </div>
 
-            <div className="relative flex flex-wrap gap-6 h-[700px] overflow-hidden">
+            <div className="relative flex flex-wrap gap-6 h-[700px] pt-4 overflow-hidden">
                 <ProductCard />
                 <ProductCard />
                 <ProductCard />

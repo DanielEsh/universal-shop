@@ -44,7 +44,7 @@ export const ProductCard = () => {
     }
 
     return (
-        <div className="w-[320px] h-[600px] p-16 rounded-md bg-dark-400">
+        <div className="group w-[320px] h-[600px] p-16 rounded-md bg-dark-400 transform transition-transform ease-in-out duration-300 hover:-translate-y-4">
             <div className="flex flex-col h-full">
                 <div ref={refCallback} className="fader relative w-full h-[450px] overflow-hidden">
                     {mockCardInfo.images.map((image, idx) => {
@@ -139,7 +139,7 @@ export const ProductCard = () => {
                             </span>
                         </div>
 
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 transform translate-y-full opacity-0 transition-all ease-in-out duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                             <Button 
                                 className="text-sm"
                                 addonRight={<IconCartAdd className="icon-big" />} 
