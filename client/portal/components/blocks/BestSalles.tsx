@@ -53,8 +53,6 @@ export const BestSalles = () => {
     return (
         <div className="py-[48px]">
             <ProductShowcase
-                title={title()}
-                renderTabs={tabs()}
             />
         </div>
     )
