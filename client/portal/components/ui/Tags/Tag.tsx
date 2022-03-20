@@ -44,7 +44,7 @@ export const Tag = forwardRef<any, TagProps>((props, ref) => {
     }
 
     const sizes = {
-        small: '',
+        small: 'p-2 text-sm',
         medium: 'px-4 py-2',
         large: '',
     }

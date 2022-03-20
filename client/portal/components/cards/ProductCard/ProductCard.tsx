@@ -106,20 +106,31 @@ export const ProductCard = () => {
                     </span>
 
                     <div className="flex flex-wrap gap-2">
-                        <Tag>
+                        <Tag size="small">
                             Хит продаж
                         </Tag>
-                        <Tag color="secondary">
+                        <Tag 
+                            size="small"
+                            color="secondary"
+                        >
                             Трейд ин
                         </Tag>
-                        <Tag color="secondary" outlined>
+                        <Tag 
+                            color="secondary"
+                            outlined
+                            size="small"
+                        >
                             Новинка
                         </Tag>
-                        <Tag color="secondary" disabled>
+                        <Tag 
+                            color="secondary"
+                            disabled
+                            size="small"
+                        >
                             Кешбек 500
                         </Tag>
 
-                        <div className="flex justify-center items-center bg-light-500 p-2.5 rounded-md">
+                        <div className="flex justify-center items-center bg-light-500 px-2.5 rounded-md">
                             +3
                         </div>
                     </div>
