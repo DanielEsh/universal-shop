@@ -15,7 +15,7 @@ type props = {
 
 export const ProductShowcase: FC<props> = ({ title, renderTabs }) => {
     const [isOpened, setIsOpened] = useState<boolean>(false)
-    const [maxHeight, setMaxHeight] = useState<number>(700)
+    const [maxHeight, setMaxHeight] = useState<number>(650)
 
     const showCaseRef = useRef<HTMLDivElement>(null)
 
