@@ -84,7 +84,7 @@ export const ProductCard = () => {
                                 ...Array(sliderNode?.current?.track.details.slides.length).keys(),
                             ].map(item => (
                                 <div 
-                                    className={`flex-auto h-full ${item === currentSlideIndex ? 'bg-primary-500' : 'bg-dark-500'}`}
+                                    className={`flex-auto h-full ${item === currentSlideIndex ? 'bg-primary-500' : 'bg-dark-500 dark:bg-light-500'}`}
                                     key={item}
                                 >
                                 </div>
@@ -118,7 +118,7 @@ export const ProductCard = () => {
                         <Tag color="secondary" disabled>
                             Кешбек 500
                         </Tag>
-                        
+
                         <div className="flex justify-center items-center bg-light-500 p-2.5 rounded-md">
                             +3
                         </div>
@@ -127,29 +127,29 @@ export const ProductCard = () => {
                     <div className="flex flex-col mt-auto">
                         <div className="flex flex-col">
                             <div className="flex items-center">
-                                <span className="text-sm text-gray-400 line-through">
-                            30 000
+                                <span className="text-sm text-gray-400 line-through dark:text-gray-200">
+                                    30 000
                                 </span>
-                                <span className="ml-1 text-sm text-white bg-dark-500 p-1 rounded-md">
-                            - 5 000
+                                <span className="ml-1 text-sm text-white bg-dark-500 p-1 rounded-md dark:bg-light-500 dark:text-black">
+                                    - 5 000
                                 </span>
                             </div>
-                            <span className="text-lg">
-                            25 000
+                            <span className="text-lg dark:text-white">
+                                25 000
                             </span>
                         </div>
 
                         <div className="flex gap-4">
                             <Button>
-                                <IconCartAdd />
+                                <IconCartAdd className="icon-big" />
                             </Button>
 
                             <Button color="secondary">
-                                <IconLike />
+                                <IconLike className="icon-big" />
                             </Button>
 
                             <Button color="secondary">
-                                <IconComporation />
+                                <IconComporation className="icon-big" />
                             </Button>
                         </div>
                     </div>
