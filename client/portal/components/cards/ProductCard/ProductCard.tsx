@@ -140,8 +140,11 @@ export const ProductCard = () => {
                         </div>
 
                         <div className="flex gap-4">
-                            <Button>
-                                <IconCartAdd className="icon-big" />
+                            <Button 
+                                className="text-sm"
+                                addonRight={<IconCartAdd className="icon-big" />} 
+                            >
+                                В корзину
                             </Button>
 
                             <Button color="secondary">

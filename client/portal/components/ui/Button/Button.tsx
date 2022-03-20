@@ -3,6 +3,8 @@ import cn from 'classnames'
 
 export type ButtonProps = {
     children: ReactNode
+    addonLeft?: ReactNode
+    addonRight?: ReactNode
     className?: string
     color?: 'primary' | 'secondary' | 'gray' | 'success' | 'error' | 'ghost'
     size?: 'small' | 'medium' | 'large' | 'block'
@@ -22,6 +24,8 @@ export const Button = forwardRef<HTMLElement, ButtonProps>((props, ref) => {
     const {
         children,
         className,
+        addonLeft,
+        addonRight,
         color = 'primary',
         size = 'medium',
         disabled,
@@ -88,9 +92,25 @@ export const Button = forwardRef<HTMLElement, ButtonProps>((props, ref) => {
             onBlur={onBlur}
             onFocus={onFocus}
         >
+            {
+                addonLeft && (
+                    <span className="mx-1 mr-2">
+                        {addonLeft}
+                    </span>
+                )
+            }
+
             <span>
                 {children}
             </span>
+
+            {
+                addonRight && (
+                    <span className="mx-1 ml-2">
+                        {addonRight}
+                    </span>
+                )
+            }
         </button>
     )
 })
