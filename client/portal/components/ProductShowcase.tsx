@@ -1,4 +1,9 @@
-import { ReactNode, FC, useState } from 'react'
+import { 
+    ReactNode,
+    FC,
+    useState,
+    useRef,
+} from 'react'
 import classNames from 'classnames'
 import { ProductCard } from '@/components/cards/ProductCard/ProductCard'
 import IconArrowDown from 'public/icons/arrow-down.svg'
@@ -10,18 +15,21 @@ type props = {
 
 export const ProductShowcase: FC<props> = ({ title, renderTabs }) => {
     const [isOpened, setIsOpened] = useState<boolean>(false)
+    const [maxHeight, setMaxHeight] = useState<number>(700)
+
+    const showCaseRef = useRef<HTMLDivElement>(null)
 
 
     const onOpened = () => {
+        if (showCaseRef.current) {
+            setMaxHeight(showCaseRef.current.scrollHeight)
+        }
+
         setIsOpened(true)
     }
 
     const classes = classNames(
-        'relative flex flex-wrap gap-6 pt-4 overflow-hidden',
-        {
-            ['h-[700px]']: !isOpened,
-            ['h-auto']: isOpened,
-        },
+        'relative flex flex-wrap gap-6 pt-4 overflow-hidden transition-all ease-in-out duration-300',
     )
 
     return (
@@ -36,7 +44,11 @@ export const ProductShowcase: FC<props> = ({ title, renderTabs }) => {
                 </div>
             </div>
 
-            <div className={classes}>
+            <div 
+                ref={showCaseRef}
+                className={classes}
+                style={{ 'maxHeight': maxHeight }}
+            >
                 <ProductCard />
                 <ProductCard />
                 <ProductCard />
@@ -58,6 +70,7 @@ export const ProductShowcase: FC<props> = ({ title, renderTabs }) => {
                     </div>
                 )}
             </div>
+            
         </div>
     )
 }
