@@ -41,7 +41,7 @@ export const Tab = (props: TabProps) => {
     }
 
     const classes = cn(
-        'flex items-center justify-center w-full py-2.5 transition duration-150 ease-out z-10',
+        'flex items-center justify-center w-full py-2.5 px-1 transition duration-150 ease-out z-10',
         {
             [colorsActiveList[color]]: isActive(),
             [colorsList[color]]: !disabled,

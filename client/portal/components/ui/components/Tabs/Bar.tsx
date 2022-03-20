@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, ReactNode } from 'react'
-import cn from 'classnames'
+import classNames from 'classnames'
 import { focusIn, Focus } from '@/ui/utils/focus-manager'
 import { keyList, isKeyCode } from '@/ui/utils//isKeyCode'
 import { TabsContext } from '@/ui/components/Tabs/Context'
@@ -19,7 +19,7 @@ export const Bar = ({ children }: BarProps) => {
         secondary: 'bg-dark-500  dark:bg-light-500',
     }
 
-    const classes = cn(
+    const classes = classNames(
         'relative flex p-2 rounded-md',
         colorsList[color],
         {

@@ -15,44 +15,35 @@ export const BestSalles = () => {
                         className="mb-[24px]"
                     />
 
-                    <Tabs.Bar>
-                        <Tabs.Tab value="0">
-                            Ноутбуки
-                        </Tabs.Tab>
-                        <Tabs.Tab value="1">
-                            Планшеты
-                        </Tabs.Tab>
-                        <Tabs.Tab
-                            value="2"
-                        >
-                            Смартфоны
-                        </Tabs.Tab>
-                        <Tabs.Tab
-                            value="3"
-                        >
-                            Телевизоры
-                        </Tabs.Tab>
-                    </Tabs.Bar>
+                    <div>
+                        <Tabs.Bar>
+                            <Tabs.Tab value="0">
+                                Ноутбуки
+                            </Tabs.Tab>
+                            <Tabs.Tab value="1">
+                                Планшеты
+                            </Tabs.Tab>
+                            <Tabs.Tab value="2">
+                                Смартфоны
+                            </Tabs.Tab>
+                            <Tabs.Tab value="3">
+                                Телевизоры
+                            </Tabs.Tab>
+                        </Tabs.Bar>
+                    </div>
                 </div>
                 
                 <Tabs.Panel value="0">
-                    <ProductShowcase
-                    />
+                    <ProductShowcase />
                 </Tabs.Panel>
                 <Tabs.Panel value="1">
-                    <div className="text-white">
-                        Планшеты
-                    </div>
+                    <ProductShowcase />
                 </Tabs.Panel>
                 <Tabs.Panel value="2">
-                    <div className="text-white">
-                        Смартфоны
-                    </div>
+                    <ProductShowcase />
                 </Tabs.Panel>
                 <Tabs.Panel value="3">
-                    <div className="text-white">
-                        Телевизоры
-                    </div>
+                    <ProductShowcase />
                 </Tabs.Panel>
             </Tabs>
         </div>
