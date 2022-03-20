@@ -6,12 +6,15 @@ export const BestSalles = () => {
         <ColoredTitle 
             label="Хит"
             colored="продаж"
+            className="mb-[24px]"
         />
     )
 
     return (
-        <ProductShowcase
-            title={title()}
-        />
+        <div className="py-[48px]">
+            <ProductShowcase
+                title={title()}
+            />
+        </div>
     )
 }

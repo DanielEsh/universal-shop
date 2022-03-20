@@ -23,8 +23,7 @@ const mockCardInfo = {
 }
 
 const styles = {
-    productCardRoot: 'bg-gray-100 w-[320px] h-[600px] p-16 rounded-md',
-    slider: 'fader relative w-full h-[450px] overflow-hidden',
+    slider: '',
     sliderImage: 'fader__slide absolute flex h-full bg-gray-100 text-black',
     sliderSwitcherContainer: 'absolute top-0 z-1 flex w-full h-full',
     sliderSwitcher: 'flex-auto bg-transparent',
@@ -56,14 +55,14 @@ export const ProductCard = () => {
     }
 
     return (
-        <div className="bg-gray-100 w-[320px] h-[600px] p-16 rounded-md dark:bg-dark-400">
+        <div className="w-[320px] h-[600px] p-16 rounded-md bg-dark-400">
             <div className="flex flex-col h-full">
-                <div ref={refCallback} className={styles.slider}>
+                <div ref={refCallback} className="fader relative w-full h-[450px] overflow-hidden">
                     {mockCardInfo.images.map((image, idx) => {
                         return (
                             <div 
                                 key={image.id}
-                                className={styles.sliderImage}
+                                className="fader__slide absolute flex h-full text-black"
                                 style={{ opacity: opacities[idx] }}
                             >
                                 <Image
