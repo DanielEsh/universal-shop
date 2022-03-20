@@ -5,33 +5,35 @@ import { Tabs } from '@/ui/components/Tabs'
 export const BestSalles = () => {
     return (
         <div className="py-[48px]">
-            <ColoredTitle 
-                label="Хит"
-                colored="продаж"
-                className="mb-[24px]"
-            />
-
             <Tabs
                 defaultActiveTab={'1'}
             >
-                <Tabs.Bar>
-                    <Tabs.Tab value="0">
-                        Ноутбуки
-                    </Tabs.Tab>
-                    <Tabs.Tab value="1">
-                        Планшеты
-                    </Tabs.Tab>
-                    <Tabs.Tab
-                        value="2"
-                    >
-                        Смартфоны
-                    </Tabs.Tab>
-                    <Tabs.Tab
-                        value="3"
-                    >
-                        Телевизоры
-                    </Tabs.Tab>
-                </Tabs.Bar>
+                <div className="flex justify-between">
+                    <ColoredTitle 
+                        label="Хит"
+                        colored="продаж"
+                        className="mb-[24px]"
+                    />
+
+                    <Tabs.Bar>
+                        <Tabs.Tab value="0">
+                            Ноутбуки
+                        </Tabs.Tab>
+                        <Tabs.Tab value="1">
+                            Планшеты
+                        </Tabs.Tab>
+                        <Tabs.Tab
+                            value="2"
+                        >
+                            Смартфоны
+                        </Tabs.Tab>
+                        <Tabs.Tab
+                            value="3"
+                        >
+                            Телевизоры
+                        </Tabs.Tab>
+                    </Tabs.Bar>
+                </div>
                 
                 <Tabs.Panel value="0">
                     <ProductShowcase
