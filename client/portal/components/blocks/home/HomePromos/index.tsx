@@ -4,7 +4,7 @@ import { DayProduct } from './DayProduct'
 export const HomePromos = () => {
     return (
         <div className="container mx-auto">
-            <div className="flex gap-[40px] h-[600px]">
+            <div className="flex gap-[40px] h-[550px]">
                 <div className="flex-auto overflow-hidden">
                     <HomePromosSlider />
                 </div>
