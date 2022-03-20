@@ -1,5 +1,5 @@
 import { FC, MouseEvent } from 'react'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/ui/components/Button'
 import IconRemove from 'public/icons/remove.svg'
 
 type Props = {

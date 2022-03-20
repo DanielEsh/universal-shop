@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/ui/components/Button'
 import { MainHeaderNavLinks } from '@/components/layouts/header/MainHeaderNavLinks'
 import { MainHeaderActions } from '@/components/layouts/header/MainHeaderActions'
 

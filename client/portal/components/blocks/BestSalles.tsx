@@ -1,5 +1,5 @@
 import { ProductShowcase } from '../ProductShowcase'
-import { ColoredTitle } from '../ui/Typography/ColoredTitle'
+import { ColoredTitle } from '@/ui/components/Typography/ColoredTitle'
 
 export const BestSalles = () => {
     const title = () => (

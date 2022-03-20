@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { useKeenSlider } from 'keen-slider/react'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/ui/components/Button'
 import { HomeHeroPagination } from '@/components/blocks/home/HomeHero/HomeHeroPagination'
 import { HomeHeroFraction } from '@/components/blocks/home/HomeHero/HomeHeroFraction'
 import { HomeHeroArrows } from '@/components/blocks/home/HomeHero/HomeHeroArrows'

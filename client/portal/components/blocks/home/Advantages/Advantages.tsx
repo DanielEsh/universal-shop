@@ -1,6 +1,6 @@
 import React from 'react'
 import { AdvantagesCard } from './AdvantagesCard'
-import { ColoredTitle } from '@/components/ui/Typography/ColoredTitle'
+import { ColoredTitle } from '@/ui/components/Typography/ColoredTitle'
 import IconPackage from 'public/icons/package.svg'
 import IconReward from 'public/icons/reward.svg'
 import IconCoinDollar from 'public/icons/coin-dollar.svg'

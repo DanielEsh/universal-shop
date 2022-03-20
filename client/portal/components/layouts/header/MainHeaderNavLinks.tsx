@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import { Link } from '@/components/ui/Link'
+import { Link } from '@/ui/components/Link'
 
 const LINKS = [
     {
