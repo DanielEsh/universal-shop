@@ -22,17 +22,6 @@ const mockCardInfo = {
     ],
 }
 
-const styles = {
-    slider: '',
-    sliderImage: 'fader__slide absolute flex h-full bg-gray-100 text-black',
-    sliderSwitcherContainer: 'absolute top-0 z-1 flex w-full h-full',
-    sliderSwitcher: 'flex-auto bg-transparent',
-    sliderPagination: 'absolute bottom-2 flex gap-x-4 w-full h-[1px]',
-    category: 'text-sm text-gray-400',
-    name: 'text-lg',
-    rating: 'flex justify-center',
-}
-
 export const ProductCard = () => {
     const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0)
     const [opacities, setOpacities] = useState<number[]>([])
@@ -75,13 +64,13 @@ export const ProductCard = () => {
                         )
                     })}
                     <div 
-                        className={styles.sliderSwitcherContainer}
+                        className="absolute top-0 z-1 flex w-full h-full"
                         onMouseLeave={() => onChangeSlide(0)}
                     >
                         {mockCardInfo.images.map(({ id }, idx) => {
                             return (
                                 <div 
-                                    className={styles.sliderSwitcher}
+                                    className="flex-auto bg-transparent"
                                     key={id}
                                     onMouseEnter={() => onChangeSlide(idx)}
                                 />
@@ -89,7 +78,7 @@ export const ProductCard = () => {
                         })}
                     </div>
 
-                    <div className={styles.sliderPagination}>
+                    <div className="absolute bottom-2 flex gap-x-4 w-full h-[1px]">
                         {
                             [
                                 ...Array(sliderNode?.current?.track.details.slides.length).keys(),
@@ -105,15 +94,15 @@ export const ProductCard = () => {
                 </div>
 
                 <div className="flex flex-col h-full">
-                    <span className={styles.category}>
-                    Смартфон
+                    <span className="text-sm text-gray-400 dark:text-gray-300">
+                        Смартфон
                     </span>
-                    <span className={styles.name}>
-                    Xiaomi Redmi 9A 2/32Gb Granite Gray
+                    <span className="text-lg dark:text-white">
+                        Xiaomi Redmi 9A 2/32Gb Granite Gray
                     </span>
 
-                    <span className={styles.rating}>
-                    *****
+                    <span className="flex justify-center">
+                        *****
                     </span>
 
                     <div className="flex flex-wrap gap-2">
