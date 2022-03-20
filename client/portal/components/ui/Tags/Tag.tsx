@@ -27,7 +27,7 @@ export const Tag = forwardRef<any, TagProps>((props, ref) => {
 
     const colors = {
         primary: 'bg-primary-500 border-primary-500 text-black',
-        secondary: 'bg-dark-500 border-dark-500 text-white',
+        secondary: 'bg-dark-500 border-dark-500 text-white dark:bg-light-500 dark:text-black',
         gray: '',
         success: '',
         error: '',
@@ -36,7 +36,7 @@ export const Tag = forwardRef<any, TagProps>((props, ref) => {
 
     const outlinedColors = {
         primary: 'border-primary-500 text-black',
-        secondary: 'border-dark-500 text-black',
+        secondary: 'border-dark-500 text-black dark:border-light-500 dark:text-white',
         gray: '',
         success: '',
         error: '',

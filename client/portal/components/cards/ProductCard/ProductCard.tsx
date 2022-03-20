@@ -107,17 +107,21 @@ export const ProductCard = () => {
 
                     <div className="flex flex-wrap gap-2">
                         <Tag>
-                        Хит продаж
+                            Хит продаж
                         </Tag>
                         <Tag color="secondary">
-                        Трейд ин
+                            Трейд ин
                         </Tag>
                         <Tag color="secondary" outlined>
-                        Новинка
+                            Новинка
                         </Tag>
                         <Tag color="secondary" disabled>
-                        Кешбек 500
+                            Кешбек 500
                         </Tag>
+                        
+                        <div className="flex justify-center items-center bg-light-500 p-2.5 rounded-md">
+                            +3
+                        </div>
                     </div>
 
                     <div className="flex flex-col mt-auto">
