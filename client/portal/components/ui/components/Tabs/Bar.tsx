@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, ReactNode, FC } from 'react'
+import { useContext, useEffect, useRef, ReactNode } from 'react'
 import cn from 'classnames'
 import { focusIn, Focus } from '@/ui/utils/focus-manager'
 import { keyList, isKeyCode } from '@/ui/utils//isKeyCode'
@@ -9,7 +9,7 @@ export type BarProps = {
   children: ReactNode
 }
 
-export const Bar: FC<BarProps> = ({ children }) => {
+export const Bar = ({ children }: BarProps) => {
     const barRef = useRef<HTMLDivElement>(null)
 
     const { color, direction, activeTabIndicatorProperties } = useContext(TabsContext)
@@ -28,7 +28,11 @@ export const Bar: FC<BarProps> = ({ children }) => {
         },
     )
 
-    const onKeyDown = (event) => {
+    const onKeyDown = (event: KeyboardEvent) => {
+        if (!barRef.current) {
+            return
+        }
+
         if (direction === 'horizontal') {
             if (isKeyCode(event.code, [keyList.LEFT])) {
                 return focusIn(barRef.current, Focus.Previous | Focus.WrapAround)
@@ -56,6 +60,7 @@ export const Bar: FC<BarProps> = ({ children }) => {
         return () => {
             window.removeEventListener('keydown', onKeyDown)
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const styles = {

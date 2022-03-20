@@ -1,7 +1,12 @@
-import { useContext } from 'react'
+import { useContext, ReactNode } from 'react'
 import { TabsContext } from '@/ui/components/Tabs/Context'
 
-export const Panel = ({ value, children }) => {
+type TabPanel = {
+    value: number | string
+    children: ReactNode
+}
+
+export const Panel = ({ value, children }: TabPanel) => {
     const { activeTab } = useContext(TabsContext)
 
     if (activeTab !== value) {

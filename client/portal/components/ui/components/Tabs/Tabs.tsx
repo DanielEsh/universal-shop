@@ -12,7 +12,7 @@ export type TabsProps = {
     children: ReactNode
     direction?: 'vertical' | 'horizontal'
     defaultActiveTab: number | string
-    color?: 'primary' | 'secondary' | 'gray'
+    color?: 'primary' | 'secondary'
     onChange?: (index: number | string) => void
 }
 
@@ -41,7 +41,9 @@ export const TabsRoot = forwardRef<HTMLDivElement, TabsProps>((props, ref) => {
 
     const onChangeActivaTab = (val: string | number) => {
         setActiveTabValue(val)
-        onChange(val)
+        if (onChange) {
+            onChange(val)
+        }
     }
 
     const context = {

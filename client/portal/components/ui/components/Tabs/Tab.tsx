@@ -1,15 +1,15 @@
-import { ReactNode, FC, useContext, useCallback, useRef, useEffect } from 'react'
+import { ReactNode, useContext, useCallback, useRef, useEffect } from 'react'
 import cn from 'classnames'
 import { ActiveTabIndicatorPropertiesTabType } from '@/ui/components/Tabs/Tabs'
 import { TabsContext } from '@/ui/components/Tabs/Context'
 
 type TabProps = {
-  value: string | number
-  children: ReactNode
-  disabled?: boolean
+    value: string | number
+    children: ReactNode
+    disabled?: boolean
 }
 
-export const Tab: FC<TabProps> = (props) => {
+export const Tab = (props: TabProps) => {
     const {
         value,
         children,
@@ -22,6 +22,7 @@ export const Tab: FC<TabProps> = (props) => {
 
     const isActive = useCallback(() => {
         return value === activeTab
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activeTab])
 
     const colorsList = {
@@ -54,7 +55,7 @@ export const Tab: FC<TabProps> = (props) => {
     }
 
     useEffect(() => {
-        if (isActive()) {
+        if (isActive() && tabRef.current) {
             const value: ActiveTabIndicatorPropertiesTabType = {
                 top: tabRef.current.offsetTop,
                 left: tabRef.current.offsetLeft,
@@ -64,13 +65,14 @@ export const Tab: FC<TabProps> = (props) => {
 
             onChangeIndicator(value)
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activeTab])
 
     return (
         <button
             ref={tabRef}
             role="tab"
-            tabIndex={isActive ? 0 : -1}
+            tabIndex={isActive() ? 0 : -1}
             className={classes}
             onClick={onClick}
             disabled={disabled}
