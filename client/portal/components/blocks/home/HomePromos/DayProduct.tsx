@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import { HomeHeroPagination } from '@/components/blocks/home/HomeHero/HomeHeroPagination'
-import { FullSliderArrows } from '@/components/FullSliderArrows'
 import { ProductCard } from '@/components/cards/ProductCard/ProductCard'
+import { SliderArrowRight } from '@/components/slider/SliderArrowRight'
+import { SliderArrowLeft } from '@/components/slider/SliderArrowLeft'
 
 export const DayProduct = () => {
     const [loaded, setLoaded] = useState<boolean>(false)
@@ -21,15 +22,11 @@ export const DayProduct = () => {
     return (
         <div className="relative w-full h-full rounded-md bg-gray-200">
             <div ref={refCallback} className="keen-slider h-full">
-                <div className="keen-slider__slide"><ProductCard /></div>
-                <div className="keen-slider__slide"><ProductCard /></div>
-                <div className="keen-slider__slide"><ProductCard /></div>
-                <div className="keen-slider__slide"><ProductCard /></div>
+                <div className="keen-slider__slide flex justify-center"><ProductCard /></div>
+                <div className="keen-slider__slide flex justify-center"><ProductCard /></div>
+                <div className="keen-slider__slide flex justify-center"><ProductCard /></div>
+                <div className="keen-slider__slide flex justify-center"><ProductCard /></div>
             </div>
-
-            {loaded && sliderNode && (
-                <FullSliderArrows slider={sliderNode} />
-            )}
 
             <div className="flex justify-center align-center">
                 {loaded && sliderNode && (
@@ -39,6 +36,9 @@ export const DayProduct = () => {
                     />
                 )}
             </div>
+
+            <SliderArrowLeft onClick={() => sliderNode.current?.prev()} />
+            <SliderArrowRight onClick={() => sliderNode.current?.next()} />
         </div>
     )
 }

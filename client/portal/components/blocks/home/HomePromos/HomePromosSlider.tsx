@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import { HomeHeroPagination } from '@/components/blocks/home/HomeHero/HomeHeroPagination'
-import { FullSliderArrows } from '@/components/FullSliderArrows'
+import { FullSliderArrows } from '@/components/slider/FullSliderArrows'
 
 import Image from 'next/image'
 import Promo1 from 'public/images/promos/promo1.png'
