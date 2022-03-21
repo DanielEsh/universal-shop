@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
-import { HomeHeroPagination } from '@/components/blocks/home/HomeHero/HomeHeroPagination'
 import { ProductCard } from '@/components/cards/ProductCard/ProductCard'
+import { SliderDotsPagination } from '@/components/slider/SliderDotsPagination'
 import { SliderArrowRight } from '@/components/slider/SliderArrowRight'
 import { SliderArrowLeft } from '@/components/slider/SliderArrowLeft'
 
@@ -19,8 +19,10 @@ export const DayProduct = () => {
         },
     })
 
+    const slides = () => [...Array(sliderNode?.current?.track.details.slides.length).keys()]
+
     return (
-        <div className="relative w-full h-full rounded-md bg-gray-200">
+        <div className="relative w-full h-full rounded-md bg-gray-200 dark:bg-dark-400">
             <div ref={refCallback} className="keen-slider h-full">
                 <div className="keen-slider__slide flex justify-center"><ProductCard /></div>
                 <div className="keen-slider__slide flex justify-center"><ProductCard /></div>
@@ -30,9 +32,10 @@ export const DayProduct = () => {
 
             <div className="flex justify-center align-center">
                 {loaded && sliderNode && (
-                    <HomeHeroPagination
-                        slider={sliderNode}
-                        activeSlide={currentSlideIndex}
+                    <SliderDotsPagination
+                        slides={slides()}
+                        activeSlideIndex={currentSlideIndex}
+                        onChange={(idx) => sliderNode?.current?.moveToIdx(idx)}
                     />
                 )}
             </div>
