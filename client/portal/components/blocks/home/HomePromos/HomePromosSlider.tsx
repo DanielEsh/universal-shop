@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
-import { HomeHeroPagination } from '@/components/blocks/home/HomeHero/HomeHeroPagination'
 import { FullSliderArrows } from '@/components/slider/FullSliderArrows'
 
 import Image from 'next/image'
@@ -20,9 +19,11 @@ export const HomePromosSlider = () => {
         },
     })
 
+    const slides = () => [...Array(sliderNode?.current?.track.details.slides.length).keys()]
+
     return (
-        <div className="relative w-auto h-full rounded-md bg-gray-100 overflow-hidden">
-            <div ref={refCallback} className="keen-slider h-full">
+        <div className="relative w-auto h-full rounded-md bg-gray-100">
+            <div ref={refCallback} className="keen-slider h-full overflow-hidden">
                 <div className="keen-slider__slide">
                     <Image 
                         src={Promo1}
@@ -38,15 +39,6 @@ export const HomePromosSlider = () => {
             {loaded && sliderNode && (
                 <FullSliderArrows slider={sliderNode} />
             )}
-
-            <div className="flex justify-center align-center">
-                {loaded && sliderNode && (
-                    <HomeHeroPagination
-                        slider={sliderNode}
-                        activeSlide={currentSlideIndex}
-                    />
-                )}
-            </div>
         </div>
     )
 }
