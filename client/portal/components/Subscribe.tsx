@@ -1,4 +1,5 @@
 import { Button } from '@/ui/components/Button'
+import { Input } from '@/ui/components/Input'
 
 export const Subscribe = () => {
     return (
@@ -6,11 +7,15 @@ export const Subscribe = () => {
             <div className="flex justify-between items-center h-full px-[148px]">
                 <div className="flex">
                     <div>
-                        name
+                        <Input 
+                            label="имя"
+                        />
                     </div>
 
                     <div>
-                        email
+                        <Input 
+                            label="почта"
+                        />
                     </div>
                 </div>
 
