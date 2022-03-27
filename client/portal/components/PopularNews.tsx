@@ -1,56 +1,67 @@
-import React from 'react'
+
+import { CategoryCard } from '@/components/cards/CategoryCard'
+import { ColoredTitle } from '@/components/ui/components/Typography/ColoredTitle'
+
+
+const mockCategories = [
+    {
+        id: 1,
+        name: 'Для дома',
+        placeClass: 'col-span-2',
+    },
+    {
+        id: 2,
+        name: 'Смартфоны и гаджеты',
+        placeClass: 'row-span-2',
+    },
+    {
+        id: 3,
+        name: 'Аксессуары',
+        placeClass: '',
+    },
+    {
+        id: 4,
+        name: 'Кухня',
+        placeClass: 'row-span-2',
+    },
+    {
+        id: 5,
+        name: 'ТВ и мультимедиа',
+        placeClass: '',
+    },
+    {
+        id: 6,
+        name: 'Компьютеры',
+        placeClass: 'row-span-2',
+    },
+    {
+        id: 7,
+        name: 'Услуги',
+        placeClass: 'col-span-2',
+    },
+]
 
 export const PopularNews = () => {
     return (
-        <div className="grid-container">
-            <div className="box bg-gray-200">
-                <div className="content">
-                    <h3>Title1</h3>
-                    <p>Description</p>
-                    <div>Button</div>
-                </div>
+        <div className="py-10">
+            <div className="flex justify-between">
+                <ColoredTitle 
+                    className="mb-10"
+                    label="Последние"
+                    colored="новости"
+                />
             </div>
-            <div className="box bg-gray-200">
-                <div className="content">
-                    <h3>Title2</h3>
-                    <p>Description</p>
-                    <div>Button</div>
-                </div>
-            </div>
-            <div className="box bg-gray-200">
-                <div className="content">
-                    <h3>Title3</h3>
-                    <p>Description</p>
-                    <div>Button</div>
-                </div>
-            </div>
-            <div className="box bg-gray-200">
-                <div className="content">
-                    <h3>Title4</h3>
-                    <p>Description5</p>
-                    <div>Button</div>
-                </div>
-            </div>
-            <div className="box bg-gray-200">
-                <div className="content">
-                    <h3>Title6</h3>
-                    <p>Description</p>
-                    <div>Button</div>
-                </div>
-            </div>
-            <div className="box bg-gray-200">
-                <div className="content">
-                    <h3>Title7</h3>
-                    <p>Description</p>
-                    <div>Button</div>
-                </div>
-            </div>
-            <div className="box bg-gray-200">
-                <div className="content">
-                    <h3>Title8</h3>
-                    <p>Description</p>
-                    <div>Button</div>
-                </div>
+
+            <div className="grid gap-4 grid-cols-4 grid-rows-3 auto-rows-[30px]">
+                {
+                    mockCategories.map((popularCategory) => (
+                        <CategoryCard 
+                            key={popularCategory.id}
+                            className={popularCategory.placeClass}
+                            title={popularCategory.name}
+                        />
+                    ))
+                }
             </div>
         </div>
     )
