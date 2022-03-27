@@ -1,4 +1,4 @@
-import { forwardRef, ReactNode, useState, useEffect, useRef } from 'react'
+import { forwardRef, ReactNode, useState, useEffect, useRef, ChangeEvent } from 'react'
 import cn from 'classnames'
 
 export type InputProps = {
@@ -11,7 +11,7 @@ export type InputProps = {
     readOnly?: boolean
     errorField?: string | number
     onClick?: () => void
-    onChange?: (event) => void
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void
     onFocus?: () => void
     onBlur?: () => void
     autoFocus?: boolean
@@ -69,7 +69,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
         },
     )
 
-    const handleChange = (event) => {
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         if (readOnly) return
         setInputValue(event.target.value)
         if (onChange) onChange(event)
