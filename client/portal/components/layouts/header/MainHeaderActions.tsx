@@ -43,7 +43,7 @@ export const MainHeaderActions = () => {
                         key={index}
                         className="group flex items-center justify-center flex-col px-4 py-3.5 transition-color hover:bg-dark-500 hover:text-white"
                     >
-                        <span className="icon-big transition-transform group-hover:scale-150">{icon()}</span>
+                        <span className="icon-big">{icon()}</span>
                         <span className="text-sm mt-1">{name}</span>
                     </div>
                 ))
