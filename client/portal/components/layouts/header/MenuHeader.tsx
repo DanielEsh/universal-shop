@@ -17,5 +17,5 @@ export const MenuHeader = () => {
 
             <div className="mr-3">Телевизоры</div>
         </div>
-    );
-};
+    )
+}
