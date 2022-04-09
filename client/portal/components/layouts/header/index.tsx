@@ -47,7 +47,8 @@ export const Header = () => {
         'top-0 left-0 w-full z-10 transition-all duration-300 ease',
         {
             ['absolute']: !isFixedPosition,
-            ['fixed dark:bg-dark-300 dark:text-white h-[76px]']: isFixedPosition,
+            ['fixed bg-dark-300/80 dark:text-white h-[76px]']: isFixedPosition,
+            ['dark:bg-dark-300']: isMenuVisible,
         },
     )
 
