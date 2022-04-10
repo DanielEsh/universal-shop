@@ -42,7 +42,7 @@ export const HomeHero = () => {
     })
 
     return (
-        <div className="relative h-screen">
+        <div className="relative home-hero">
             <div ref={refCallback} className="keen-slider w-full h-full">
                 {mockData.map((slide) => (
                     <div

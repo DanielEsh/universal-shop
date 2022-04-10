@@ -1,25 +1,15 @@
-import { FC, MouseEvent } from 'react'
+import { FC } from 'react'
 import { Button } from '@/ui/components/Button'
-import IconRemove from 'public/icons/remove.svg'
 
 type Props = {
     label: string,
     buttonLabel?: string,
-    onClose?: () => void,
 }
 
 export const HeaderBanner: FC<Props> = ({ 
     label, 
     buttonLabel = 'Посмотреть', 
-    onClose,
 }) => {
-
-    const onCloseClick = (e: MouseEvent) => {
-        e.preventDefault()
-        if (onClose) {
-            onClose()
-        }
-    }
 
     return (
         <a 
@@ -36,13 +26,6 @@ export const HeaderBanner: FC<Props> = ({
                 >
                     {buttonLabel}
                 </Button>
-
-                <button 
-                    className="absolute right-0 flex justify-center items-center w-[32px] h-[32px] rounded-full bg-light-500 text-black transition-transform transform hover:rotate-180 hover:scale-125"
-                    onClick={onCloseClick}
-                >
-                    <IconRemove className="icon-big" />
-                </button>
             </div>
         </a>
     )

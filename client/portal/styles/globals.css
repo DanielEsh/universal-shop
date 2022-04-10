@@ -187,3 +187,8 @@ footer {
 .input:not(:placeholder-shown) ~ .label  {
   transform: translateY(-1.25rem);
 }
+
+
+.home-hero {
+  height: calc(100vh - 40px);
+}

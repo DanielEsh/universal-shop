@@ -5,6 +5,7 @@ import { MenuHeader } from './MenuHeader'
 
 export const Header = () => {
     const [isTransparent, setIsTransparent] = useState<boolean>(true)
+    const [isFixed, setIsFixed] = useState<boolean>(false)
     const [isMenuVisible, setIsMenuVisible] = useState<boolean>(true)
 
     const SCROLL_THRESHOLD = 600
@@ -36,14 +37,21 @@ export const Header = () => {
                 setIsMenuVisible(false)
             }
         } else {
+            if (window.pageYOffset > 0) {
+                setIsFixed(true)
+            } else {
+                setIsFixed(false)
+            }
             setIsTransparent(true)
             setIsMenuVisible(true)
         }
     }
 
     const classes = classNames(
-        'sticky top-0 left-0 w-full z-10 h-[76px] transition-all duration-300 ease',
+        'fixed left-0 w-full z-10 h-[76px] transition-all duration-300 ease',
         {
+            ['top-[56px]']: !isFixed,
+            ['top-0']: isFixed,
             ['bg-transparent']: isTransparent,
             ['bg-light-300 dark:bg-dark-300']: isMenuVisible && !isTransparent,
             ['bg-light-300/80 dark:bg-dark-300/80']: !isMenuVisible && !isTransparent,

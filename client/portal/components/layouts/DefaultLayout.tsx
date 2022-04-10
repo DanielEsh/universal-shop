@@ -10,17 +10,12 @@ type DefaultLayoutProps = {
 export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     const [isHeaderBannerVisible, setIsHeaderBannerVisible] = useState<boolean>(true)
 
-    const closeHeaderBanner = () => {
-        setIsHeaderBannerVisible(false)
-    }
-
     return (
         <>
             {
                 isHeaderBannerVisible && (
                     <HeaderBanner 
                         label="При покупке 200 бонусов в подарок"
-                        onClose={closeHeaderBanner}
                     />
                 )
             }
