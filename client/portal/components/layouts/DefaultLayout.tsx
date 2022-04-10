@@ -16,14 +16,14 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
 
     return (
         <>
-            {/* {
+            {
                 isHeaderBannerVisible && (
                     <HeaderBanner 
                         label="При покупке 200 бонусов в подарок"
                         onClose={closeHeaderBanner}
                     />
                 )
-            } */}
+            }
             
             <div className="relative">
                 <Header />
