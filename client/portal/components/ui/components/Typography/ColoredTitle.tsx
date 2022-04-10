@@ -16,19 +16,14 @@ export const ColoredTitle = ({ label, colored, className, color = 'secondary' }:
     }
 
     const classes = classnames(
-        'text-4xl font-bold text-currentColor',
+        'relative text-4xl font-bold text-currentColor inline-block after:absolute after:-bottom-[10px] after:left-1/2 after:w-[90%] after:h-[4px] after:bg-primary-500 after:transform after:-translate-x-1/2',
         className,
         colors[color],
     )
 
     return (
         <h2 className={classes}>
-            <span dangerouslySetInnerHTML={{ __html: `${label} &nbsp;` }} />
-            <span className="relative inline-block p-2 before:block before:absolute before:-inset-1 before:skew-y-3 before:rounded-md before:bg-primary-500">
-                <span className="relative text-black">
-                    {colored}
-                </span>
-            </span>
+            {label} {colored}
         </h2>
     )
 }
