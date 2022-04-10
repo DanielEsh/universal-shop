@@ -111,9 +111,35 @@ footer {
   z-index: 0; */
 }
 
-.fixed-header-enter {
-  transform: translateY(-40px);
+
+.my-node-enter {
+  position: fixed;
+  transform: translateY(-100%);
   opacity: 0;
+}
+.my-node-enter-active {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: opacity .5s ease, transform .3s ease;
+}
+.my-node-enter-done {
+  position: fixed;
+  transform: translateY(0%);
+  transition: opacity .5s ease, transform .3s ease;
+}
+.my-node-exit {
+  background-color: yellow;
+}
+.my-node-exit-active {
+  background-color: yellow;
+}
+
+.my-node-exit-done {
+  background-color: yellow;
+}
+
+.fixed-header-enter {
+  background-color: red;
 }
 .fixed-header-enter-active {
   opacity: 1;

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import classNames from 'classnames'
-import { CSSTransition } from 'react-transition-group'
 import { MainHeader } from './MainHeader'
 import { MenuHeader } from './MenuHeader'
+import { HeaderBanner } from '../headerBanner'
 
 export const Header = () => {
     const [isFixedPosition, setIsFixedPosition] = useState<boolean>(false)
@@ -43,31 +43,50 @@ export const Header = () => {
         }
     }
 
+    // const classes = classNames(
+    //     'top-0 left-0 w-full z-10 transition-all duration-300 ease',
+    //     {
+    //         ['absolute h-[76px]']: !isFixedPosition,
+    //         ['fixed bg-dark-300/80 dark:text-white h-[76px] -translate-y-full opacity-0']: isFixedPosition,
+    //         ['dark:bg-dark-300']: isMenuVisible,
+    //     },
+    // )
+
     const classes = classNames(
-        'top-0 left-0 w-full z-10 transition-all duration-300 ease',
+        'fixed top-0 left-0 w-full z-10',
         {
-            ['absolute']: !isFixedPosition,
-            ['fixed bg-dark-300/80 dark:text-white h-[76px]']: isFixedPosition,
-            ['dark:bg-dark-300']: isMenuVisible,
+            ['']: !isFixedPosition,
+            ['bg-error-400']: isFixedPosition,
         },
     )
 
+    // const menuClasses = classNames(
+    //     'py-2 bg-dark-300 transform transition-all duration-300 ease', 
+    //     {
+    //         ['-translate-y-10 opacity-0 invisible']: !isMenuVisible,
+    //         ['translate-y-0 opacity-1 visible']: isMenuVisible,
+    //     },
+    // )
+
     const menuClasses = classNames(
         'py-2 bg-dark-300 transform transition-all duration-300 ease', 
-        {
-            ['-translate-y-10 opacity-0 invisible']: !isMenuVisible,
-            ['translate-y-0 opacity-1 visible']: isMenuVisible,
-        },
+        // {
+        //     ['-translate-y-10 opacity-0 invisible']: !isMenuVisible,
+        //     ['translate-y-0 opacity-1 visible']: isMenuVisible,
+        // },
     )
 
     return (
         <header className={classes}>
+            <HeaderBanner 
+                label="При покупке 200 бонусов в подарок"
+                    
+            />
             <MainHeader />
 
             <div className={menuClasses}>
                 <MenuHeader />
             </div>
-            
         </header>
     )
 }
