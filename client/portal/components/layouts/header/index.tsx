@@ -45,8 +45,8 @@ export const Header = () => {
         'sticky top-0 left-0 w-full z-10 h-[76px] transition-all duration-300 ease',
         {
             ['bg-transparent']: isTransparent,
-            ['bg-dark-300']: isMenuVisible && !isTransparent,
-            ['bg-dark-300/80']: !isMenuVisible && !isTransparent,
+            ['bg-light-300 dark:bg-dark-300']: isMenuVisible && !isTransparent,
+            ['bg-light-300/80 dark:bg-dark-300/80']: !isMenuVisible && !isTransparent,
         },
     )
 
@@ -55,7 +55,7 @@ export const Header = () => {
         {
             ['bg-transparent']: isTransparent,
             ['-translate-y-10 opacity-0 invisible']: !isMenuVisible && !isTransparent,
-            ['bg-dark-300 translate-y-0 opacity-1 visible']: isMenuVisible && !isTransparent,
+            ['bg-light-300 dark:bg-dark-300 translate-y-0 opacity-1 visible']: isMenuVisible && !isTransparent,
         },
     )
 
