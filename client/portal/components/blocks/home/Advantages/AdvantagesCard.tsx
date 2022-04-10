@@ -13,10 +13,10 @@ export const AdvantagesCard = ({ title, icon, description, buttonText, buttonLin
     return (
         <div className="group 
             relative
-            dark:bg-dark-400 dark:text-white p-[60px] 
-            border-t-[1px] border-r-[1px] third:border-r-0 border-dark-300 
+            bg-light-500 dark:bg-dark-400 dark:text-white p-[60px] 
+            border-t-[1px] border-r-[1px] third:border-r-0 border-light-300 dark:border-dark-300 
             flex flex-col justify-center items-center 
-            before:content-[''] before:third:hidden before:absolute before:z-2 before:-top-[32px] before:-right-[32px] before:w-[64px] before:h-[64px] before:border-[24px] before:border-dark-400 before:bg-primary-400
+            before:content-[''] before:third:hidden before:absolute before:z-2 before:-top-[32px] before:-right-[32px] before:w-[64px] before:h-[64px] before:border-[24px] before:border-light-500 before:dark:border-dark-400 before:bg-primary-400
         "
         >
             <div className="absolute z-3 inset-0 bg-primary-500 opacity-0 transition-all ease-in-out duration-300 group-hover:opacity-100 group-hover:-inset-[24px]" />
