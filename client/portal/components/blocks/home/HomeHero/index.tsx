@@ -62,7 +62,12 @@ export const HomeHero = () => {
                                     dangerouslySetInnerHTML={{ __html: slide.title }}
                                 />
                                 <p className="mt-4 text-4xl">{slide.text}</p>
-                                <Button>{slide.buttonText}</Button>
+                                <Button 
+                                    className="mt-8"
+                                    size="large"
+                                >           
+                                    {slide.buttonText}
+                                </Button>
                             </div>
                         </div>
                     </div>
