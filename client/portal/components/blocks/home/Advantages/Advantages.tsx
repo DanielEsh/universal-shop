@@ -62,7 +62,7 @@ export const Advantages = () => {
                     colored="качества"
                 />
 
-                <div className="grid grid-cols-3">
+                <div className="grid grid-cols-3 border-b">
                     {
                         AdnvatagesMock.map(({ id, title, icon, description, buttonText, buttonLink }) => (
                             <AdvantagesCard 

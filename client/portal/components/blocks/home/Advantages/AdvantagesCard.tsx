@@ -17,6 +17,7 @@ export const AdvantagesCard = ({ title, icon, description, buttonText, buttonLin
             border-t-[1px] border-r-[1px] third:border-r-0 border-light-300 dark:border-dark-300 
             flex flex-col justify-center items-center 
             before:content-[''] before:third:hidden before:absolute before:z-2 before:-top-[32px] before:-right-[32px] before:w-[64px] before:h-[64px] before:border-[24px] before:border-light-500 before:dark:border-dark-400 before:bg-primary-400
+            after:content-[''] after:third:hidden after:absolute after:z-2 after:-bottom-[32px] after:-right-[32px] after:w-[64px] after:h-[64px] after:border-[24px] after:border-light-500 after:dark:border-dark-400 after:bg-primary-400
         "
         >
             <div className="absolute z-3 inset-0 bg-primary-500 opacity-0 transition-all ease-in-out duration-300 group-hover:opacity-100 group-hover:-inset-[24px]" />
