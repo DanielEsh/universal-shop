@@ -41,7 +41,7 @@ export const ProductShowcase = () => {
             <ProductCard />
 
             {!isOpened && (
-                <div className="absolute bottom-0 flex justify-center items-center  w-full h-[50px] bg-gradient-to-t from-dark-500 transparent">
+                <div className="absolute bottom-0 flex justify-center items-center  w-full h-[50px] bg-gradient-to-t from-light-500 dark:from-dark-500 transparent">
                     <button 
                         className="flex justify-center items-center w-[44px] h-[44px] bg-primary-500 rounded-full tranform transition-transform ease-in-out duration-300 hover:scale-110"
                         onClick={onOpened}

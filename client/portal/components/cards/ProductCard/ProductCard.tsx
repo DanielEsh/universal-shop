@@ -44,7 +44,7 @@ export const ProductCard = () => {
     }
 
     return (
-        <div className="group w-[288px] h-[550px] p-16 rounded-md bg-dark-400 transform will-change-transform transition-transform ease-in-out duration-300 delay-100 hover:-translate-y-4">
+        <div className="group w-[288px] h-[550px] p-16 rounded-md bg-light-400 dark:bg-dark-400 transform will-change-transform transition-all ease-in-out duration-300 hover:-translate-y-2 hover:shadow-md">
             <div className="flex flex-col h-full">
                 <div ref={refCallback} className="fader relative w-full h-[400px] overflow-hidden">
                     {mockCardInfo.images.map((image, idx) => {
