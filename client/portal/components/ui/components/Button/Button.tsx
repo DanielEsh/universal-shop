@@ -40,7 +40,7 @@ export const Button = forwardRef<HTMLElement, ButtonProps>((props, ref) => {
         type,
     } = props
 
-    const rootClasses = 'relative flex justify-center items-center rounded-md overflow-hidden ripple-hover__container focus:outline-none focus:ring '
+    const rootClasses = 'relative flex justify-center items-center shadow-lg rounded-md overflow-hidden ripple-hover__container focus:outline-none focus:ring '
 
     const colors = {
         primary: 'bg-primary-500 border border-primary-500 text-black ring-offset-1 ring-primary-300',
